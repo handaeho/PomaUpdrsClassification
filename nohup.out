@@ -1,0 +1,1990 @@
+Traceback (most recent call last):
+  File "server_connection.py", line 6, in <module>
+    from flask import Flask, request
+ModuleNotFoundError: No module named 'flask'
+Traceback (most recent call last):
+  File "server_connection.py", line 6, in <module>
+    from flask import Flask, request
+ModuleNotFoundError: No module named 'flask'
+ * Serving Flask app 'server_connection' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+ * Running on http://192.168.0.173:5005/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [03/Sep/2021 14:36:00] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:36:32] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:36:38] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:48:45] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:48:46] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:51:00] "GET / HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [03/Sep/2021 14:54:47] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:55:03] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:55:11] "POST /file-upload HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:56:03] "[31m[1mGET /file-upload HTTP/1.1[0m" 405 -
+192.168.0.1 - - [03/Sep/2021 14:56:05] "[31m[1mGET /file-upload HTTP/1.1[0m" 405 -
+192.168.0.1 - - [03/Sep/2021 14:56:14] "GET / HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+Delayed: File upload complete.PNG
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [03/Sep/2021 14:57:03] "[35m[1mPOST /file-upload HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2077, in wsgi_app
+    return response(environ, start_response)
+TypeError: 'str' object is not callable
+192.168.0.1 - - [03/Sep/2021 14:57:03] "GET /file-upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:57:03] "GET /file-upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:57:03] "GET /file-upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:57:03] "GET /file-upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:57:03] "GET /file-upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [03/Sep/2021 14:58:34] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:58:38] "[35m[1mPOST /file-upload HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1535, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1699, in make_response
+    f"The view function for {request.endpoint!r} did not"
+TypeError: The view function for 'upload_files' did not return a valid response. The function either returned None or ended without a return statement.
+192.168.0.1 - - [03/Sep/2021 14:58:38] "GET /file-upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:58:38] "GET /file-upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:58:38] "GET /file-upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:58:38] "GET /file-upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [03/Sep/2021 14:59:00] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:59:03] "[35m[1mPOST /file-upload HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1535, in finalize_request
+    response = self.make_response(rv)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1699, in make_response
+    f"The view function for {request.endpoint!r} did not"
+TypeError: The view function for 'upload_files' did not return a valid response. The function either returned None or ended without a return statement.
+192.168.0.1 - - [03/Sep/2021 14:59:03] "GET /file-upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:59:03] "GET /file-upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:59:03] "GET /file-upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:59:03] "GET /file-upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [03/Sep/2021 14:59:49] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 14:59:53] "POST /file-upload HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [03/Sep/2021 15:01:22] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:01:26] "[32mPOST /file-upload HTTP/1.1[0m" 302 -
+192.168.0.1 - - [03/Sep/2021 15:01:27] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:02:08] "[32mPOST /file-upload HTTP/1.1[0m" 302 -
+192.168.0.1 - - [03/Sep/2021 15:02:08] "GET / HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [03/Sep/2021 15:05:34] "[35m[1mPOST /file-upload HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1537, in finalize_request
+    response = self.process_response(response)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1884, in process_response
+    response = self.ensure_sync(handler)(response)
+  File "/home/aiteam/daeho/PomaUpdrs/server_connection.py", line 52, in add_close_action
+    return redirect(url_for('/'))
+  File "/usr/local/lib/python3.6/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.6/site-packages/flask/helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/routing.py", line 2305, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint '/'. Did you mean 'upload_files' instead?
+192.168.0.1 - - [03/Sep/2021 15:05:34] "GET /file-upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:05:34] "GET /file-upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:05:34] "GET /file-upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:05:34] "GET /file-upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:05:34] "GET /file-upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [03/Sep/2021 15:05:48] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:05:53] "[35m[1mPOST /file-upload HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2088, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1537, in finalize_request
+    response = self.process_response(response)
+  File "/usr/local/lib/python3.6/site-packages/flask/app.py", line 1884, in process_response
+    response = self.ensure_sync(handler)(response)
+  File "/home/aiteam/daeho/PomaUpdrs/server_connection.py", line 52, in add_close_action
+    return redirect(url_for('/file-upload'))
+  File "/usr/local/lib/python3.6/site-packages/flask/helpers.py", line 338, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/usr/local/lib/python3.6/site-packages/flask/helpers.py", line 326, in url_for
+    endpoint, values, method=method, force_external=external
+  File "/usr/local/lib/python3.6/site-packages/werkzeug/routing.py", line 2305, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint '/file-upload'. Did you mean 'upload_main' instead?
+192.168.0.1 - - [03/Sep/2021 15:05:53] "GET /file-upload?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:05:53] "GET /file-upload?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:05:53] "GET /file-upload?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:05:53] "GET /file-upload?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [03/Sep/2021 15:06:10] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:06:14] "[32mPOST /file-upload HTTP/1.1[0m" 302 -
+192.168.0.1 - - [03/Sep/2021 15:06:14] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:32:14] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:32:44] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:32:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+192.168.0.1 - - [03/Sep/2021 15:33:07] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:33:50] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+192.168.0.1 - - [03/Sep/2021 15:34:56] "[32mPOST /file-upload HTTP/1.1[0m" 302 -
+192.168.0.1 - - [03/Sep/2021 15:34:56] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:35:43] "[32mPOST /file-upload HTTP/1.1[0m" 302 -
+192.168.0.1 - - [03/Sep/2021 15:35:43] "GET / HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:37:27] "[31m[1mGET /file-upload HTTP/1.1[0m" 405 -
+192.168.0.1 - - [03/Sep/2021 15:40:48] "[32mPOST /file-upload HTTP/1.1[0m" 302 -
+192.168.0.1 - - [03/Sep/2021 15:40:48] "GET / HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [03/Sep/2021 15:41:32] "[33mGET / HTTP/1.1[0m" 404 -
+192.168.0.1 - - [03/Sep/2021 15:41:38] "[31m[1mGET /file-upload HTTP/1.1[0m" 405 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [03/Sep/2021 15:42:37] "[31m[1mGET /file-upload HTTP/1.1[0m" 405 -
+192.168.0.1 - - [03/Sep/2021 15:42:44] "[31m[1mGET /file-upload HTTP/1.1[0m" 405 -
+192.168.0.1 - - [03/Sep/2021 15:44:22] "POST /file-upload HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [03/Sep/2021 15:47:59] "POST /file-upload HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/server_connection.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [03/Sep/2021 15:49:13] "POST /file-upload HTTP/1.1" 200 -
+192.168.0.1 - - [03/Sep/2021 15:54:31] "POST /file-upload HTTP/1.1" 200 -
+218.52.115.131 - - [06/Sep/2021 10:09:36] "POST /file-upload HTTP/1.1" 200 -
+165.22.63.82 - - [07/Sep/2021 02:39:34] "[33mGET / HTTP/1.0[0m" 404 -
+192.168.0.1 - - [07/Sep/2021 10:39:51] "POST /file-upload HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/dataset_treatment/dataset_summary.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/tensorflow/dnn_classifier/updrs_DNN_Robust_3class_210518.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_internal/commands/show.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_internal/models/target_python.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_internal/network/xmlrpc.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_internal/operations/freeze.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_internal/req/constructors.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_internal/resolution/legacy/__init__.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_internal/resolution/resolvelib/resolver.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_internal/utils/distutils_args.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_internal/utils/logging.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_internal/utils/unpacking.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_vendor/chardet/big5prober.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_vendor/chardet/euctwprober.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_vendor/chardet/metadata/__init__.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_vendor/distlib/manifest.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_vendor/idna/codec.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_vendor/pep517/_in_process.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_vendor/retrying.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_vendor/urllib3/contrib/_securetransport/low_level.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_vendor/webencodings/mklabels.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pkg_resources/_vendor/packaging/specifiers.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/setuptools/command/bdist_egg.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/setuptools/_distutils/py35compat.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/setuptools/_vendor/packaging/requirements.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/dataset_treatment/dataset_summary.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [07/Sep/2021 15:00:50] "[33mGET / HTTP/1.1[0m" 404 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/dataset_treatment/dataset_summary.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [07/Sep/2021 17:10:36] "POST /file-upload HTTP/1.1" 200 -
+192.168.0.1 - - [07/Sep/2021 17:32:16] "POST /file-upload HTTP/1.1" 200 -
+192.168.0.1 - - [07/Sep/2021 17:35:08] "POST /file-upload HTTP/1.1" 200 -
+89.248.165.103 - - [08/Sep/2021 03:55:49] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.165.103 - - [08/Sep/2021 03:55:49] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/decision_tree/poma_RobustScalerDT_3class_210518.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/test1234.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/test1234.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/scikitlearn/support_vector_machine/updrs_RobustScaler_NuSVC_2class_210518_1500.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+139.59.25.47 - - [09/Sep/2021 18:09:40] "[33mHEAD / HTTP/1.0[0m" 404 -
+139.59.25.47 - - [09/Sep/2021 18:09:43] "[33mGET /system_api.php HTTP/1.1[0m" 404 -
+139.59.25.47 - - [09/Sep/2021 18:09:47] "[33mGET /c/version.js HTTP/1.1[0m" 404 -
+139.59.25.47 - - [09/Sep/2021 18:09:51] "[33mGET /streaming/clients_live.php HTTP/1.1[0m" 404 -
+139.59.25.47 - - [09/Sep/2021 18:09:54] "[33mGET /stalker_portal/c/version.js HTTP/1.1[0m" 404 -
+139.59.25.47 - - [09/Sep/2021 18:09:57] "[33mGET /stream/live.php HTTP/1.1[0m" 404 -
+139.59.25.47 - - [09/Sep/2021 18:10:01] "[33mGET /flu/403.html HTTP/1.1[0m" 404 -
+192.168.0.1 - - [10/Sep/2021 15:04:22] "POST /file-upload HTTP/1.1" 200 -
+192.168.0.1 - - [10/Sep/2021 16:22:11] "POST /file-upload HTTP/1.1" 200 -
+104.248.43.200 - - [12/Sep/2021 19:26:11] "[33mGET / HTTP/1.0[0m" 404 -
+185.142.239.16 - - [12/Sep/2021 22:55:21] "[33mGET / HTTP/1.1[0m" 404 -
+185.142.239.16 - - [12/Sep/2021 22:55:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+185.142.239.16 - - [12/Sep/2021 22:55:25] code 400, message Bad request syntax ('\x03Ê\x06>a\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+185.142.239.16 - - [12/Sep/2021 22:55:25] "[35m[1mÊ>a                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.16 - - [13/Sep/2021 03:24:05] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.165.16 - - [13/Sep/2021 03:24:05] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/tensorflow/dnn_classifier/poma_DNN_210813.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/tensorflow/dnn_classifier/poma_DNN_210813.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/tensorflow/dnn_classifier/poma_DNN_210813.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/tensorflow/dnn_classifier/poma_DNN_210813.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/tensorflow/dnn_classifier/poma_DNN_210813.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/tensorflow/dnn_classifier/poma_DNN_210813.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/tensorflow/dnn_classifier/poma_DNN_210813.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/tensorflow/dnn_classifier/poma_DNN_210813.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/tensorflow/dnn_classifier/poma_DNN_210813.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/tensorflow/dnn_classifier/poma_DNN_210813.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/tensorflow/dnn_classifier/poma_DNN_210813.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/tensorflow/dnn_classifier/poma_DNN_210813.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/TensorFlowModels/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/TensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/TensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/TensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/TensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/TensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/TensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/TensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/TensorFlowModels/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/poma_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+185.216.140.35 - - [13/Sep/2021 17:42:45] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+185.216.140.35 - - [13/Sep/2021 17:42:45] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+89.248.165.91 - - [14/Sep/2021 00:31:14] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.165.91 - - [14/Sep/2021 00:31:14] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+5.188.206.50 - - [14/Sep/2021 05:51:53] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+5.188.206.50 - - [14/Sep/2021 05:51:53] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [14/Sep/2021 10:59:19] "POST /file-upload HTTP/1.1" 200 -
+192.168.0.1 - - [14/Sep/2021 11:03:33] "POST /file-upload HTTP/1.1" 200 -
+192.168.0.1 - - [14/Sep/2021 11:09:12] "POST /file-upload HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+185.219.52.154 - - [15/Sep/2021 00:05:56] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00É·\x00\x00')
+185.219.52.154 - - [15/Sep/2021 00:05:56] "[35m[1m 4           ( ÿ U   MSSQLServer É·  [0m" HTTPStatus.BAD_REQUEST -
+218.154.17.135 - - [15/Sep/2021 15:07:04] "[33mGET / HTTP/1.1[0m" 404 -
+218.154.17.135 - - [15/Sep/2021 15:07:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+185.219.52.154 - - [15/Sep/2021 20:33:45] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00É·\x00\x00')
+185.219.52.154 - - [15/Sep/2021 20:33:45] "[35m[1m 4           ( ÿ U   MSSQLServer É·  [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.23 - - [15/Sep/2021 20:59:49] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+89.248.165.23 - - [15/Sep/2021 20:59:49] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+142.93.148.186 - - [16/Sep/2021 14:43:39] "[33mHEAD / HTTP/1.0[0m" 404 -
+142.93.148.186 - - [16/Sep/2021 14:43:41] "[33mGET /system_api.php HTTP/1.1[0m" 404 -
+142.93.148.186 - - [16/Sep/2021 14:43:44] "[33mGET /c/version.js HTTP/1.1[0m" 404 -
+142.93.148.186 - - [16/Sep/2021 14:43:48] "[33mGET /streaming/clients_live.php HTTP/1.1[0m" 404 -
+142.93.148.186 - - [16/Sep/2021 14:43:51] "[33mGET /stalker_portal/c/version.js HTTP/1.1[0m" 404 -
+142.93.148.186 - - [16/Sep/2021 14:43:54] "[33mGET /stream/live.php HTTP/1.1[0m" 404 -
+142.93.148.186 - - [16/Sep/2021 14:43:57] "[33mGET /flu/403.html HTTP/1.1[0m" 404 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+185.219.52.154 - - [16/Sep/2021 17:40:51] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00É·\x00\x00')
+185.219.52.154 - - [16/Sep/2021 17:40:51] "[35m[1m 4           ( ÿ U   MSSQLServer É·  [0m" HTTPStatus.BAD_REQUEST -
+185.216.140.35 - - [16/Sep/2021 20:37:35] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+185.216.140.35 - - [16/Sep/2021 20:37:35] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+89.248.165.90 - - [18/Sep/2021 14:17:22] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.165.90 - - [18/Sep/2021 14:17:22] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+185.219.52.154 - - [18/Sep/2021 17:39:09] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00É·\x00\x00')
+185.219.52.154 - - [18/Sep/2021 17:39:09] "[35m[1m 4           ( ÿ U   MSSQLServer É·  [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.16 - - [18/Sep/2021 21:57:45] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.165.16 - - [18/Sep/2021 21:57:45] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+185.165.190.34 - - [19/Sep/2021 06:17:42] "[33mGET / HTTP/1.1[0m" 404 -
+185.165.190.34 - - [19/Sep/2021 06:17:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+185.165.190.34 - - [19/Sep/2021 06:17:48] code 400, message Bad request syntax ('\x03wWFa\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+185.165.190.34 - - [19/Sep/2021 06:17:48] "[35m[1mwWFa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [0m" HTTPStatus.BAD_REQUEST -
+34.79.68.246 - - [19/Sep/2021 06:17:51] "[33mGET / HTTP/1.1[0m" 404 -
+89.248.165.16 - - [19/Sep/2021 07:35:52] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.165.16 - - [19/Sep/2021 07:35:52] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+128.199.1.141 - - [19/Sep/2021 19:41:24] "[33mGET / HTTP/1.0[0m" 404 -
+185.219.52.154 - - [19/Sep/2021 20:50:38] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00É·\x00\x00')
+185.219.52.154 - - [19/Sep/2021 20:50:38] "[35m[1m 4           ( ÿ U   MSSQLServer É·  [0m" HTTPStatus.BAD_REQUEST -
+185.219.52.154 - - [20/Sep/2021 02:35:11] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00É·\x00\x00')
+185.219.52.154 - - [20/Sep/2021 02:35:11] "[35m[1m 4           ( ÿ U   MSSQLServer É·  [0m" HTTPStatus.BAD_REQUEST -
+89.248.168.222 - - [21/Sep/2021 04:03:53] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.168.222 - - [21/Sep/2021 04:03:53] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+188.92.77.15 - - [21/Sep/2021 19:10:03] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+188.92.77.15 - - [21/Sep/2021 19:10:03] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+89.248.165.52 - - [22/Sep/2021 01:55:57] code 400, message Bad request syntax ('\x04\x01\x00\x19ÔRdL\x00')
+89.248.165.52 - - [22/Sep/2021 01:55:57] "[35m[1m ÔRdL [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.52 - - [22/Sep/2021 01:56:58] code 400, message Bad request syntax ('\x05\x01\x00')
+89.248.165.52 - - [22/Sep/2021 01:56:58] "[35m[1m [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.52 - - [22/Sep/2021 01:56:58] "[33mCONNECT smtp.aol.com:25 HTTP/1.1[0m" 404 -
+89.248.165.52 - - [22/Sep/2021 02:43:49] code 400, message Bad HTTP/0.9 request type ('\x04\x01\x00PUÎ')
+89.248.165.52 - - [22/Sep/2021 02:43:49] "[35m[1m PUÎ s [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.52 - - [22/Sep/2021 02:44:50] code 400, message Bad request syntax ('\x05\x01\x00')
+89.248.165.52 - - [22/Sep/2021 02:44:50] "[35m[1m [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.52 - - [22/Sep/2021 02:44:50] "[33mCONNECT 85.206.160.115:80 HTTP/1.1[0m" 404 -
+89.248.165.103 - - [22/Sep/2021 09:21:08] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.165.103 - - [22/Sep/2021 09:21:08] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+103.76.23.245 - - [22/Sep/2021 17:59:02] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x03\x00\x00\x00')
+103.76.23.245 - - [22/Sep/2021 17:59:02] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+192.168.0.1 - - [23/Sep/2021 11:38:22] "[33mGET / HTTP/1.1[0m" 404 -
+192.168.0.1 - - [23/Sep/2021 11:38:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [23/Sep/2021 17:25:01] "POST /file-upload HTTP/1.1" 200 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/__init__.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/setup.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/setup.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/setup.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/setup.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/setup.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/setup.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/setup.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/setup.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+164.90.205.60 - - [24/Sep/2021 17:31:53] "[33mHEAD / HTTP/1.0[0m" 404 -
+164.90.205.60 - - [24/Sep/2021 17:31:55] "[33mGET /system_api.php HTTP/1.1[0m" 404 -
+164.90.205.60 - - [24/Sep/2021 17:31:59] "[33mGET /c/version.js HTTP/1.1[0m" 404 -
+164.90.205.60 - - [24/Sep/2021 17:32:02] "[33mGET /streaming/clients_live.php HTTP/1.1[0m" 404 -
+164.90.205.60 - - [24/Sep/2021 17:32:06] "[33mGET /stalker_portal/c/version.js HTTP/1.1[0m" 404 -
+164.90.205.60 - - [24/Sep/2021 17:32:10] "[33mGET /stream/live.php HTTP/1.1[0m" 404 -
+164.90.205.60 - - [24/Sep/2021 17:32:13] "[33mGET /flu/403.html HTTP/1.1[0m" 404 -
+185.156.72.27 - - [24/Sep/2021 23:15:39] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+185.156.72.27 - - [24/Sep/2021 23:15:39] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+185.156.72.27 - - [24/Sep/2021 23:15:39] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+185.156.72.27 - - [24/Sep/2021 23:15:39] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+93.174.95.106 - - [25/Sep/2021 19:07:23] "[33mGET / HTTP/1.1[0m" 404 -
+93.174.95.106 - - [25/Sep/2021 19:07:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+93.174.95.106 - - [25/Sep/2021 19:07:58] code 400, message Bad request syntax ('\x03ÝôNa\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+93.174.95.106 - - [25/Sep/2021 19:07:58] "[35m[1mÝôNa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [0m" HTTPStatus.BAD_REQUEST -
+34.79.68.246 - - [25/Sep/2021 19:08:19] "[33mGET / HTTP/1.1[0m" 404 -
+89.248.165.89 - - [26/Sep/2021 03:34:11] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.165.89 - - [26/Sep/2021 03:34:11] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+66.240.192.138 - - [26/Sep/2021 11:21:42] "[33mGET / HTTP/1.1[0m" 404 -
+66.240.192.138 - - [26/Sep/2021 11:21:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+66.240.192.138 - - [26/Sep/2021 11:21:52] code 400, message Bad request syntax ('\x039ÙOa\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+66.240.192.138 - - [26/Sep/2021 11:21:52] "[35m[1m9ÙOa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [0m" HTTPStatus.BAD_REQUEST -
+34.79.107.251 - - [26/Sep/2021 11:23:01] "[33mGET / HTTP/1.1[0m" 404 -
+185.142.236.38 - - [26/Sep/2021 13:58:21] "[33mGET / HTTP/1.1[0m" 404 -
+185.142.236.38 - - [26/Sep/2021 13:58:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+185.142.236.38 - - [26/Sep/2021 13:58:25] code 400, message Bad request syntax ('\x03îýOa\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+185.142.236.38 - - [26/Sep/2021 13:58:25] "[35m[1mîýOa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [0m" HTTPStatus.BAD_REQUEST -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/dnn_linear_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNNLinear/updrs_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNNLinear/updrs_DNN_Linear_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+185.220.100.240 - - [28/Sep/2021 05:17:43] "[33mGET / HTTP/1.1[0m" 404 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNNLinear/poma_DNN_Linear.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678

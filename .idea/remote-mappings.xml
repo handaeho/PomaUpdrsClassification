@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteMappingsManager">
+    <list>
+      <list>
+        <remote-mappings server-id="python@4e456460-00ec-4cc2-b3ff-3c072675ff3c" />
+        <remote-mappings server-id="python@sftp://aiteam@106.240.123.212:4885/root/.conda/envs/daeho/bin/python3.6" />
+      </list>
+    </list>
+  </component>
+</project>

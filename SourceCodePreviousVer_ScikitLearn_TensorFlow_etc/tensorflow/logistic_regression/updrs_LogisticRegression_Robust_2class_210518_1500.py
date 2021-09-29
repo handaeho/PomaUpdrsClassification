@@ -1,0 +1,160 @@
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+import re
+
+from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import RobustScaler
+
+tf.random.set_seed(210518)
+
+
+def make_input_fn(data_df, label_df, num_epochs=10, shuffle=True, batch_size=32):
+    """
+    input_function은 입력 파이프라인을 스트리밍으로 공급하는 tf.data.Dataset으로 데이터를 변환하는 방법을 명시.
+    tf.data.Dataset은 데이터 프레임, CSV 형식 파일 등과 같은 여러 소스를 사용한다.
+
+    :param data_df: dateset
+    :param label_df: dataset의 라벨(타겟)
+    :param num_epochs: 반복 횟수
+    :param shuffle: 셔플 (True, False)
+    :param batch_size: 배치 크기
+    :return:
+    """
+
+    def input_function():
+        ds = tf.data.Dataset.from_tensor_slices((dict(data_df), label_df))
+
+        if shuffle:
+            ds = ds.shuffle(1000)
+
+        ds = ds.batch(batch_size).repeat(num_epochs)
+
+        return ds
+
+    return input_function
+
+
+def make_input_fn_test(data_df, num_epochs=10, shuffle=True, batch_size=32):
+    """
+    input_function은 입력 파이프라인을 스트리밍으로 공급하는 tf.data.Dataset으로 데이터를 변환하는 방법을 명시.
+    tf.data.Dataset은 데이터 프레임, CSV 형식 파일 등과 같은 여러 소스를 사용한다.
+
+    테스트 데이터를 위한 메소드
+    학습 및 검증 데이터는 {데이터 값: 라벨}의 형태였지만, 테스트에서는 라벨 없이 {데이터 값}의 dict 형태
+    """
+
+    def input_function():
+        ds = tf.data.Dataset.from_tensor_slices((dict(data_df)))
+
+        if shuffle:
+            ds = ds.shuffle(1000)
+
+        ds = ds.batch(batch_size).repeat(num_epochs)
+
+        return ds
+
+    return input_function
+
+
+# poma_2class = pd.read_csv('../../dataset/poma_dataset_210518_1500.csv')
+updrs_2class = pd.read_csv('../../../dataset/updrs_dataset_210518_1500.csv')
+
+# poma_dataset_2class = poma_2class.copy()
+updrs_dataset_2class = updrs_2class.copy()
+
+# TF2 Pipe-line에는 컬럼명에 특수문자 불가.
+cols = [re.sub(r'[\W_]', "", i) for i in updrs_dataset_2class.columns]
+
+for i in range(len(cols)):
+    cols[i] = cols[i] + str(i)
+
+updrs_dataset_2class.columns = cols
+
+print(updrs_dataset_2class)
+
+dftrain, dftest = train_test_split(updrs_dataset_2class, test_size=0.2,
+                                   stratify=updrs_dataset_2class['updrsdanger2class0'], shuffle=True, random_state=1234)
+
+# 'danger' 컬럼 pop -> 라벨
+y_train = dftrain.pop('updrsdanger2class0')
+y_test = dftest.pop('updrsdanger2class0')
+
+print(dftrain.shape, '훈련 샘플')
+print(dftest.shape, '테스트 샘플')
+
+print(y_train.shape, '훈련 샘플 라벨')
+print(y_test.shape, '테스트 샘플 라벨')
+
+# 변형 객체 생성
+rs_scaler = RobustScaler()
+
+# 훈련데이터의 모수 분포 저장
+rs_scaler.fit(dftrain)
+
+# 훈련 데이터 스케일링
+x_train_scaled = rs_scaler.transform(dftrain)
+
+# 스케일링 된 결과 값으로 본래 값을 구할 수도 있다.
+x_origin = rs_scaler.inverse_transform(x_train_scaled)
+
+# input function의 input은 dataframe type.
+x_train_scaled_df = pd.DataFrame(x_train_scaled, columns=dftrain.columns)
+
+# 데이터 셋에서 레이블에 해당하는 위험도(danger)를 제외한 모든 열 => 수치형 열(Numeric columns)
+NUMERIC_COLUMNS = updrs_dataset_2class.columns[1:]  # 첫번째 열인 'updrs_danger_2class' 제외
+
+feature_columns = []
+
+for feature_name in NUMERIC_COLUMNS:
+    feature_columns.append(tf.feature_column.numeric_column(feature_name, dtype=tf.float32))
+
+print(feature_columns)
+
+train_input_fn = make_input_fn(x_train_scaled_df, y_train)
+
+# input function 확인 해보기
+ds = make_input_fn(x_train_scaled_df, y_train, batch_size=10)()
+
+for feature_batch, label_batch in ds.take(1):
+    print('특성 키:, ', list(feature_batch.keys()))
+    print('"Velocityms1" 배치: ', feature_batch['Velocityms1'].numpy())
+    print('레이블 배치: ', label_batch.numpy())
+
+    #  tf.keras.layers.DenseFeatures 층을 사용하여 특정한 특성 열의 결과 확인
+    Velocityms0_column = feature_columns[7]
+    print(tf.keras.layers.DenseFeatures([Velocityms0_column])(feature_batch).numpy())
+
+# Logistic Regression 모델 생성 (= tf.estimator.LinearClassifier)
+linear_estimator = tf.estimator.LinearClassifier(feature_columns=feature_columns, n_classes=2)
+
+# 학습 데이터로 train
+linear_estimator.train(train_input_fn)
+
+# 테스트 데이터도 스케일링
+x_test_scaled = rs_scaler.transform(dftest)
+
+x_test_scaled_df = pd.DataFrame(x_test_scaled, columns=dftest.columns)
+
+# 훈련된 LR 모델로 테스트 데이터 셋 예측
+test_input_fn = make_input_fn_test(x_test_scaled_df, num_epochs=1, shuffle=True)
+
+print('------------------ Test Predict ------------------')
+pred = list(linear_estimator.predict(test_input_fn))
+pred_df = pd.DataFrame(pred)
+
+print(pred_df)
+print('------------------------------------------')
+print(pred_df['class_ids'])
+
+class_ids = pred_df['class_ids'].astype('float64')
+
+print('------------------ Test LR ------------------------')
+print(confusion_matrix(y_test, class_ids))
+print(classification_report(y_test, class_ids, target_names=['class 0', 'class 1']))
+
+
+#
+
+

@@ -1,0 +1,20 @@
+Using bundled JDK: /home/aiteam/Apps/logstash-7.14.1/jdk
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+/home/aiteam/Apps/logstash-7.14.1/vendor/bundle/jruby/2.5.0/gems/bundler-1.17.3/lib/bundler/rubygems_integration.rb:200: warning: constant Gem::ConfigMap is deprecated
+Sending Logstash logs to /home/aiteam/Apps/logstash-7.14.1/logs which is now configured via log4j2.properties
+[2021-09-14T11:05:06,564][INFO ][logstash.runner          ] Log4j configuration path used is: /home/aiteam/Apps/logstash-7.14.1/config/log4j2.properties
+[2021-09-14T11:05:06,572][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"7.14.1", "jruby.version"=>"jruby 9.2.19.0 (2.5.8) 2021-06-15 55810c552b OpenJDK 64-Bit Server VM 11.0.11+9 on 11.0.11+9 +indy +jit [linux-x86_64]"}
+[2021-09-14T11:05:06,826][WARN ][logstash.config.source.multilocal] Ignoring the 'pipelines.yml' file because modules or command line options are specified
+[2021-09-14T11:05:07,819][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600}
+[2021-09-14T11:05:09,638][INFO ][org.reflections.Reflections] Reflections took 73 ms to scan 1 urls, producing 120 keys and 417 values 
+[2021-09-14T11:05:11,205][INFO ][logstash.outputs.elasticsearch][main] New Elasticsearch output {:class=>"LogStash::Outputs::ElasticSearch", :hosts=>["http://192.168.0.173:9200"]}
+[2021-09-14T11:05:11,620][INFO ][logstash.outputs.elasticsearch][main] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://192.168.0.173:9200/]}}
+[2021-09-14T11:05:11,767][WARN ][logstash.outputs.elasticsearch][main] Restored connection to ES instance {:url=>"http://192.168.0.173:9200/"}
+[2021-09-14T11:05:11,822][INFO ][logstash.outputs.elasticsearch][main] Elasticsearch version determined (7.9.1) {:es_version=>7}
+[2021-09-14T11:05:11,824][WARN ][logstash.outputs.elasticsearch][main] Detected a 6.x and above cluster: the `type` event field won't be used to determine the document _type {:es_version=>7}
+[2021-09-14T11:05:11,983][INFO ][logstash.outputs.elasticsearch] Using a default mapping template {:es_version=>7, :ecs_compatibility=>:disabled}
+[2021-09-14T11:05:12,040][INFO ][logstash.javapipeline    ][main] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>32, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>50, "pipeline.max_inflight"=>4000, "pipeline.sources"=>["/home/aiteam/Apps/foot_logger_poma_updrs_3L_Labs.conf"], :thread=>"#<Thread:0x3e698251 run>"}
+[2021-09-14T11:05:13,844][INFO ][logstash.javapipeline    ][main] Pipeline Java execution initialization time {"seconds"=>1.8}
+[2021-09-14T11:05:13,900][INFO ][logstash.javapipeline    ][main] Pipeline started {"pipeline.id"=>"main"}
+[2021-09-14T11:05:13,949][INFO ][filewatch.observingtail  ][main][0faeab809796e72ffa1126d226107c3e164a920d46f81d417d1a697fb8333a9c] START, creating Discoverer, Watch with file and sincedb collections
+[2021-09-14T11:05:13,960][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
