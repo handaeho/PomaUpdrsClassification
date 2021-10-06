@@ -131,7 +131,7 @@ class MakeUpdrsDnnLinearModel:
 
         try:
             # Save the entire model to a HDF5 file.
-            h5_model_dir_path = '/home/aiteam/daeho/PomaUpdrs/H5_models/DNN_Linear_H5_models/updrs_DNN_Linear_H5_Model/'
+            h5_model_dir_path = '/home/aiteam/daeho/PomaUpdrs/H5_Pb_models/DNN_Linear_H5_models/updrs_DNN_Linear_H5_Model/'
 
             model_make_date = str(datetime.datetime.now().strftime("%Y%m%d_%H%M%S"))
             model_name = f'updrs_dnn_linear_keras_ver_{model_make_date}.h5'

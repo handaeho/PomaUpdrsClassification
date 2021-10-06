@@ -25,9 +25,33 @@ from runTensorFlowModels.PomaDNNLinear.poma_DNN_Linear_keras_ver_tflite_inferenc
 from runTensorFlowModels.UpdrsDNNLinear.updrs_DNN_Linear_keras_ver_tflie_inference import \
     UpdrsDNNLinearInferenceTfLiteModel
 
+# Gradient Boosting Tree Model
+from runTensorFlowModels.PomaGBT.poma_GBT import MakePomaGBTModel
+from runTensorFlowModels.UpdrsGBT.updrs_GBT import MakeUpdrsGBTModel
+from runTensorFlowModels.PomaGBT.poma_GBT_convert_pb_to_tflite import PomaGBTConvertPbtoTflite
+from runTensorFlowModels.UpdrsGBT.updrs_GBT_convert_pb_to_tflite import UpdrsGBTConvertPbtoTflite
+
 
 # print(os.path.realpath(__file__))  # 현재 파일 실제 경로
 # print(os.path.abspath(__file__))  # 현재 파일 절대 경로
+
+
+def load_dataset_from_elastic_search():
+    """
+    Load data-set from Elastic search
+
+    :return: DataFrame form ES
+    """
+    es = Elasticsearch('[192.168.0.173]:9200')
+    # print(es.info())
+
+    index_name = 'foot_logger_poma_updrs_3l_labs_data'
+
+    s = Search(using=es, index=index_name)
+
+    df = pd.DataFrame([hit.to_dict() for hit in s.scan()])
+
+    return df
 
 
 class Run:
@@ -35,22 +59,6 @@ class Run:
         pass
 
     # load data from Elastic-Search.
-    def load_dataset_from_elastic_search(self):
-        """
-        Load data-set from Elastic search
-
-        :return: DataFrame form ES
-        """
-        es = Elasticsearch('[192.168.0.173]:9200')
-        # print(es.info())
-
-        index_name = 'foot_logger_poma_updrs_3l_labs_data'
-
-        s = Search(using=es, index=index_name)
-
-        df = pd.DataFrame([hit.to_dict() for hit in s.scan()])
-
-        return df
 
     def run_poma_dnn(self):
         """
@@ -62,7 +70,7 @@ class Run:
         """
         poma_dnn = MakePomaDnnModel()
 
-        dataset_from_es = self.load_dataset_from_elastic_search()
+        dataset_from_es = load_dataset_from_elastic_search()
 
         x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, y_test_encoding = \
             poma_dnn.load_dataset(dataset_from_es=dataset_from_es)
@@ -78,17 +86,17 @@ class Run:
         poma_dnn_convert_tflite = PomaDNNConvertH5toTflite(h5_model_name=h5_models_name, h5_model_path=h5_models_path)
 
         # convert dnn model H5 to Tf-lite and save
-        poma_tflite_save_name, poma_tflite_save_path = poma_dnn_convert_tflite.convert_save_models()
+        poma_dnn_tflite_save_name, poma_dnn_tflite_save_path = poma_dnn_convert_tflite.convert_save_models()
 
         # Inference test TF-Lite model with random sampling dataset
         poma_dnn_inference_test = PomaDNNInferenceTfLiteModel()
 
         poma_x, poma_y = poma_dnn_inference_test.poma_load_dataset(test_dataset=dataset_from_es)
 
-        accuracy = poma_dnn_inference_test.tf_lite_inference(model_path=poma_tflite_save_path,
+        accuracy = poma_dnn_inference_test.tf_lite_inference(model_path=poma_dnn_tflite_save_path,
                                                              inputs=poma_x, labels=poma_y)
 
-        return accuracy, poma_tflite_save_name, poma_tflite_save_path
+        return accuracy, poma_dnn_tflite_save_name, poma_dnn_tflite_save_path
 
     def run_updrs_dnn(self):
         """
@@ -100,7 +108,7 @@ class Run:
         """
         updrs_dnn = MakeUpdrsDnnModel()
 
-        dataset_from_es = self.load_dataset_from_elastic_search()
+        dataset_from_es = load_dataset_from_elastic_search()
 
         x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, y_test_encoding = \
             updrs_dnn.load_dataset(dataset_from_es=dataset_from_es)
@@ -116,17 +124,17 @@ class Run:
         updrs_dnn_convert_tflite = UpdrsDNNConvertH5toTflite(h5_model_name=h5_models_name, h5_model_path=h5_models_path)
 
         # convert dnn model H5 to Tf-lite and save
-        updrs_tflite_save_name, updrs_tflite_save_path = updrs_dnn_convert_tflite.convert_save_models()
+        updrs_dnn_tflite_save_name, updrs_dnn_tflite_save_path = updrs_dnn_convert_tflite.convert_save_models()
 
         # Inference test TF-Lite model with random sampling dataset
         updrs_dnn_inference_test = UpdrsDNNInferenceTfLiteModel()
 
         updrs_x, updrs_y = updrs_dnn_inference_test.updrs_load_dataset(test_dataset=dataset_from_es)
 
-        accuracy = updrs_dnn_inference_test.tf_lite_inference(model_path=updrs_tflite_save_path, inputs=updrs_x,
+        accuracy = updrs_dnn_inference_test.tf_lite_inference(model_path=updrs_dnn_tflite_save_path, inputs=updrs_x,
                                                               labels=updrs_y)
 
-        return accuracy, updrs_tflite_save_name, updrs_tflite_save_path
+        return accuracy, updrs_dnn_tflite_save_name, updrs_dnn_tflite_save_path
 
     def run_poma_dnn_linear(self):
         """
@@ -138,7 +146,7 @@ class Run:
         """
         poma_dnn_linear = MakePomaDnnLinearModel()
 
-        dataset_from_es = self.load_dataset_from_elastic_search()
+        dataset_from_es = load_dataset_from_elastic_search()
 
         x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, y_test_encoding = \
             poma_dnn_linear.load_dataset(dataset_from_es=dataset_from_es)
@@ -155,17 +163,18 @@ class Run:
                                                                         h5_model_path=h5_models_path)
 
         # convert dnn model H5 to Tf-lite and save
-        poma_tflite_save_name, poma_tflite_save_path = poma_dnn_linear_convert_tflite.convert_save_models()
+        poma_dnn_linear_tflite_save_name, poma_dnn_linear_tflite_save_path = \
+            poma_dnn_linear_convert_tflite.convert_save_models()
 
         # Inference test TF-Lite model with random sampling dataset
         poma_dnn_linear_inference_test = PomaDNNLinearInferenceTfLiteModel()
 
         poma_x, poma_y = poma_dnn_linear_inference_test.poma_load_dataset(test_dataset=dataset_from_es)
 
-        accuracy = poma_dnn_linear_inference_test.tf_lite_inference(model_path=poma_tflite_save_path,
+        accuracy = poma_dnn_linear_inference_test.tf_lite_inference(model_path=poma_dnn_linear_tflite_save_path,
                                                                     inputs=poma_x, labels=poma_y)
 
-        return accuracy, poma_tflite_save_name, poma_tflite_save_path
+        return accuracy, poma_dnn_linear_tflite_save_name, poma_dnn_linear_tflite_save_path
 
     def run_updrs_dnn_linear(self):
         """
@@ -177,7 +186,7 @@ class Run:
         """
         updrs_dnn_linear = MakeUpdrsDnnLinearModel()
 
-        dataset_from_es = self.load_dataset_from_elastic_search()
+        dataset_from_es = load_dataset_from_elastic_search()
 
         x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, y_test_encoding = \
             updrs_dnn_linear.load_dataset(dataset_from_es=dataset_from_es)
@@ -194,23 +203,66 @@ class Run:
                                                                           h5_model_path=h5_models_path)
 
         # convert dnn model H5 to Tf-lite and save
-        updrs_tflite_save_name, updrs_tflite_save_path = updrs_dnn_linear_convert_tflite.convert_save_models()
+        updrs_dnn_linear_tflite_save_name, updrs_dnn_linear_tflite_save_path = \
+            updrs_dnn_linear_convert_tflite.convert_save_models()
 
         # Inference test TF-Lite model with random sampling dataset
         updrs_dnn_linear_inference_test = UpdrsDNNLinearInferenceTfLiteModel()
 
         updrs_x, updrs_y = updrs_dnn_linear_inference_test.updrs_load_dataset(test_dataset=dataset_from_es)
 
-        accuracy = updrs_dnn_linear_inference_test.tf_lite_inference(model_path=updrs_tflite_save_path,
+        accuracy = updrs_dnn_linear_inference_test.tf_lite_inference(model_path=updrs_dnn_linear_tflite_save_path,
                                                                      inputs=updrs_x, labels=updrs_y)
 
-        return accuracy, updrs_tflite_save_name, updrs_tflite_save_path
+        return accuracy, updrs_dnn_linear_tflite_save_name, updrs_dnn_linear_tflite_save_path
+
+    def run_poma_gradient_boosting(self):
+        poma_gbt = MakePomaGBTModel()
+
+        dataset_from_es = load_dataset_from_elastic_search()
+
+        x_train_scaled, x_test_scaled, labels_train, labels_test = poma_gbt.load_dataset(
+            dataset_from_es=dataset_from_es)
+
+        # save gbt models to Pb file
+        pb_models_name, pb_models_path = poma_gbt.model_train_test_save(x_train_scaled=x_train_scaled,
+                                                                        labels_train=labels_train,
+                                                                        x_test_scaled=x_test_scaled,
+                                                                        labels_test=labels_test)
+
+        # convert gbt model Pb to Tf-lite and save
+        poma_gbt_convert_tflite = PomaGBTConvertPbtoTflite(pb_model_name=pb_models_name, pb_model_path=pb_models_path)
+
+        poma_gbt_tflite_save_name, poma_gbt_tflite_save_path = poma_gbt_convert_tflite.convert_save_models()
+
+        return poma_gbt_tflite_save_name, poma_gbt_tflite_save_path
+
+    def run_updrs_gradient_boosting(self):
+        updrs_gbt = MakeUpdrsGBTModel()
+
+        dataset_from_es = load_dataset_from_elastic_search()
+
+        x_train_scaled, x_test_scaled, labels_train, labels_test = updrs_gbt.load_dataset(
+            dataset_from_es=dataset_from_es)
+
+        # save gbt models to Pb file
+        pb_models_name, pb_models_path = updrs_gbt.model_train_test_save(x_train_scaled=x_train_scaled,
+                                                                         labels_train=labels_train,
+                                                                         x_test_scaled=x_test_scaled,
+                                                                         labels_test=labels_test)
+
+        # convert gbt model Pb to Tf-lite and save
+        updrs_gbt_convert_tflite = UpdrsGBTConvertPbtoTflite(pb_model_name=pb_models_name, pb_model_path=pb_models_path)
+
+        updrs_gbt_tflite_save_name, updrs_gbt_tflite_save_path = updrs_gbt_convert_tflite.convert_save_models()
+
+        return updrs_gbt_tflite_save_name, updrs_gbt_tflite_save_path
 
 
 if __name__ == '__main__':
     run = Run()
 
-    x = run.load_dataset_from_elastic_search()
+    x = load_dataset_from_elastic_search()
     print(x)
 
     print('-------------------- DNN Model start --------------------')
@@ -243,4 +295,13 @@ if __name__ == '__main__':
 
     #
 
+    print('-------------------- Gradient Boosting Trees Model start --------------------')
+    poma_gradient_boosting_tflite_save_name, poma_gradient_boosting_tflite_save_path = run.run_poma_gradient_boosting()
+    print('Model Name =>', poma_gradient_boosting_tflite_save_name, 'Model Path =>', poma_gradient_boosting_tflite_save_path)
 
+    #
+
+    print('----------------------------------------------------------------------------------------------------')
+
+    updrs_gradient_boosting_tflite_save_name, updrs_gradient_boosting_tflite_save_path = run.run_updrs_gradient_boosting()
+    print('Model Name =>', updrs_gradient_boosting_tflite_save_name, 'Model Path =>', updrs_gradient_boosting_tflite_save_path)

@@ -25,7 +25,7 @@ def startRun():
     if set(data) != set(current_file_list):
         run = Run()
 
-        x = run.load_dataset_from_elastic_search()
+        x = load_dataset_from_elastic_search()
         print(x)
 
         # DNN Model
