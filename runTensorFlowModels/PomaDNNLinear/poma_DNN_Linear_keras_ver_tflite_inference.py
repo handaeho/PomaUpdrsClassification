@@ -89,6 +89,6 @@ class PomaDNNLinearInferenceTfLiteModel:
         accuracy = accurate_count * 1.0 / len(prediction_digits)
 
         end = time.time()
-        print('Model running time elapsed:', end - start)
+        print('@@@@@@@@@@@@@@@ Model running time elapsed:', end - start)
 
         return accuracy

@@ -6,7 +6,7 @@ from tensorflow import estimator
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import RobustScaler
 
-print('tensorflow version:', tf.__version__)
+# print('tensorflow version:', tf.__version__)
 tf.random.set_seed(210813)
 
 model_dir = '/home/aiteam/daeho/PomaUpdrs/H5_Pb_models/GBT_PB_models/updrs_GBT_PB_Model/'  # 모델을 저장할 디렉토리

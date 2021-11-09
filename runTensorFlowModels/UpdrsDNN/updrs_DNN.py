@@ -7,7 +7,7 @@ from keras.utils.np_utils import to_categorical
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import RobustScaler
 
-print('tensorflow version:', tf.__version__)
+# print('tensorflow version:', tf.__version__)
 tf.random.set_seed(210813)
 
 
@@ -109,7 +109,7 @@ class MakeUpdrsDnnModel:
 
         model.fit(x_train_scaled, y_train_encoding,
                   validation_data=[[x_eval_scaled, y_eval_encoding]],
-                  epochs=1000, verbose=1, validation_split=0.2, callbacks=[callback])
+                  epochs=1000, verbose=0, validation_split=0.2, callbacks=[callback])
 
         model.evaluate(x_test_scaled, y_test_encoding, batch_size=64)
 
