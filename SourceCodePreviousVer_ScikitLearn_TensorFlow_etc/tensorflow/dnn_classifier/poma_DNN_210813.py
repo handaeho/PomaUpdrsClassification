@@ -11,7 +11,7 @@ from tensorflow.keras.layers import Dense
 from keras.utils.np_utils import to_categorical
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import RobustScaler
+from sklearn.preprocessing import RobustScaler, StandardScaler
 from os import path, listdir
 
 print('tensorflow version:', tf.__version__)
@@ -44,13 +44,13 @@ def load_dataset():
     labels = poma_dataset_3class.pop('pomadanger3class0').values
 
     # split dataset to raw train set, test set.
-    features_x, features_test, labels_y, labels_test = train_test_split(poma_dataset_3class, labels,
-                                                                        test_size=0.2, shuffle=True, random_state=1220)
-
-    # split raw train set to real train set, eval set.
-    features_train, features_eval, labels_train, labels_eval = train_test_split(features_x, labels_y,
+    features_train, features_test, labels_train, labels_test = train_test_split(poma_dataset_3class, labels,
                                                                                 test_size=0.2, shuffle=True,
                                                                                 random_state=1220)
+
+    features_train_x, features_eval, labels_train_x, labels_eval = train_test_split(features_train, labels_train,
+                                                                                    test_size=0.2, shuffle=True, random_state=1220)
+
     # print(x_train.values, x_train.shape)
     # print(x_test.values, x_test.shape)
     # print(y_train, y_train.shape)
@@ -60,7 +60,7 @@ def load_dataset():
     rs_scaler = RobustScaler()
 
     # 훈련 데이터 스케일링
-    x_train_scaled = rs_scaler.fit_transform(features_train)
+    x_train_scaled = rs_scaler.fit_transform(features_train_x)
 
     # 검증 데이터의 스케일링
     x_eval_scaled = rs_scaler.transform(features_eval)
@@ -71,6 +71,7 @@ def load_dataset():
     # label One-hot encoding
     y_train_encoding = to_categorical(labels_train, 3)
     y_eval_encoding = to_categorical(labels_eval, 3)
+    y_test_encoding = to_categorical(labels_test, 3)
 
     # print(x_train_scaled, x_train_scaled.shape)
     # print(x_eval_scaled, x_eval_scaled.shape)
@@ -79,7 +80,7 @@ def load_dataset():
     # print(y_train_encoding, y_train_encoding.shape)
     # print(y_eval_encoding, y_eval_encoding.shape)
 
-    return x_train_scaled, x_test_scaled, x_eval_scaled, y_train_encoding, y_eval_encoding
+    return x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, labels_test
 
 
 ##############################################################################################################
@@ -94,8 +95,11 @@ class PomaDnnModel:
         # create model
         model = Sequential()
         model.add(Dense(units=1024, activation='relu', input_shape=(95,)))
+
         model.add(Dense(units=512, activation='relu'))
+
         model.add(Dense(units=256, activation='relu'))
+
         model.add(Dense(3, activation='softmax'))
 
         # Compile model
@@ -113,7 +117,7 @@ class PomaDnnModel:
         """
         model = self.create_model_baseline()
 
-        x_train_scaled, x_test_scaled, x_eval_scaled, y_train_encoding, y_eval_encoding = load_dataset()
+        x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, labels_test = load_dataset()
 
         model.summary()
 
@@ -135,16 +139,45 @@ class PomaDnnModel:
         # print(y_test)
         # print(predictions)
 
-        # print('------------------ Test DNN ------------------------')
-        # print(confusion_matrix(labels_test, predictions))
-        # print(classification_report(labels_test, predictions, target_names=['class 0', 'class 1', 'class 2']))
+        print('------------------ Test DNN ------------------------')
+        print(confusion_matrix(labels_test, predictions))
+        print(classification_report(labels_test, predictions, target_names=['class 0', 'class 1', 'class 2']))
 
         # Save the entire model to a HDF5 file.
         h5_model_dir_path = '/home/aiteam/daeho/PomaUpdrs/DNN_H5_models/'
-        save_path = h5_model_dir_path + 'poma_dnn_keras_ver' + '{date}.h5'
-        save_path.format(date=datetime.datetime)
+
+        model_make_date = str(datetime.datetime.now().strftime("%Y%m%d_%H%M%S"))
+
+        save_path = h5_model_dir_path + 'TEST_poma_dnn_keras_ver' + f'{model_make_date}.h5'
+
         model.save(save_path)
+
+        print(save_path)
 
         return 0
 
     ##############################################################################################################
+
+
+if __name__ == '__main__':
+    r = PomaDnnModel()
+
+    r.model_train_save()
+
+    # _________________________________________________________________
+    #  Layer (type)                Output Shape              Param #
+    # =================================================================
+    #  dense (Dense)               (None, 1024)              98304
+    #
+    #  dense_1 (Dense)             (None, 512)               524800
+    #
+    #  dense_2 (Dense)             (None, 256)               131328
+    #
+    #  dense_3 (Dense)             (None, 3)                 771
+    #
+    # =================================================================
+    # Total params: 755,203
+    # Trainable params: 755,203
+    # Non-trainable params: 0
+
+

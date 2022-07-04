@@ -205,7 +205,7 @@ node {
     key: "else_branch"
     value {
       func {
-        name: "global_step_cond_false_8619"
+        name: "global_step_cond_false_3041526"
       }
     }
   }
@@ -222,7 +222,7 @@ node {
     key: "then_branch"
     value {
       func {
-        name: "global_step_cond_true_8618"
+        name: "global_step_cond_true_3041525"
       }
     }
   }
@@ -13059,7 +13059,7 @@ node {
     key: "else_branch"
     value {
       func {
-        name: "head_assert_range_assert_less_equal_Assert_AssertGuard_false_9347"
+        name: "head_assert_range_assert_less_equal_Assert_AssertGuard_false_3042254"
       }
     }
   }
@@ -13076,7 +13076,7 @@ node {
     key: "then_branch"
     value {
       func {
-        name: "head_assert_range_assert_less_equal_Assert_AssertGuard_true_9346"
+        name: "head_assert_range_assert_less_equal_Assert_AssertGuard_true_3042253"
       }
     }
   }
@@ -13366,7 +13366,7 @@ node {
     key: "else_branch"
     value {
       func {
-        name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_false_9372"
+        name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_false_3042279"
       }
     }
   }
@@ -13383,7 +13383,7 @@ node {
     key: "then_branch"
     value {
       func {
-        name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_true_9371"
+        name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_true_3042278"
       }
     }
   }
@@ -16374,7 +16374,7 @@ node {
     key: "else_branch"
     value {
       func {
-        name: "head_cond_false_9472"
+        name: "head_cond_false_3042379"
       }
     }
   }
@@ -16391,7 +16391,7 @@ node {
     key: "then_branch"
     value {
       func {
-        name: "head_cond_true_9471"
+        name: "head_cond_true_3042378"
       }
     }
   }
@@ -23103,7 +23103,2517 @@ node {
 library {
   function {
     signature {
-      name: "head_cond_false_9472"
+      name: "head_assert_range_assert_less_equal_Assert_AssertGuard_false_3042254"
+      input_arg {
+        name: "assert_head_assert_range_assert_less_equal_all"
+        type: DT_BOOL
+      }
+      input_arg {
+        name: "assert_head_labels"
+        type: DT_INT64
+      }
+      input_arg {
+        name: "assert_head_assert_range_const"
+        type: DT_INT64
+      }
+      output_arg {
+        name: "identity"
+        type: DT_BOOL
+      }
+      is_stateful: true
+    }
+    node_def {
+      name: "Assert/data_0"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_STRING
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_STRING
+            tensor_shape {
+            }
+            string_val: "Labels must <= n_classes - 1"
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Assert/data_1"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_STRING
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_STRING
+            tensor_shape {
+            }
+            string_val: "Condition x <= y did not hold element-wise:"
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Assert/data_2"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_STRING
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_STRING
+            tensor_shape {
+            }
+            string_val: "x (head/labels:0) = "
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Assert/data_4"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_STRING
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_STRING
+            tensor_shape {
+            }
+            string_val: "y (head/assert_range/Const:0) = "
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Assert"
+      op: "Assert"
+      input: "assert_head_assert_range_assert_less_equal_all"
+      input: "Assert/data_0:output:0"
+      input: "Assert/data_1:output:0"
+      input: "Assert/data_2:output:0"
+      input: "assert_head_labels"
+      input: "Assert/data_4:output:0"
+      input: "assert_head_assert_range_const"
+      attr {
+        key: "T"
+        value {
+          list {
+            type: DT_STRING
+            type: DT_STRING
+            type: DT_STRING
+            type: DT_INT64
+            type: DT_STRING
+            type: DT_INT64
+          }
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+          }
+        }
+      }
+      attr {
+        key: "summarize"
+        value {
+          i: 3
+        }
+      }
+    }
+    node_def {
+      name: "Identity"
+      op: "Identity"
+      input: "assert_head_assert_range_assert_less_equal_all"
+      input: "^Assert"
+      attr {
+        key: "T"
+        value {
+          type: DT_BOOL
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+    }
+    ret {
+      key: "identity"
+      value: "Identity:output:0"
+    }
+    attr {
+      key: "_input_shapes"
+      value {
+        list {
+          shape {
+          }
+          shape {
+            dim {
+              size: -1
+            }
+            dim {
+              size: 1
+            }
+          }
+          shape {
+          }
+        }
+      }
+    }
+    arg_attr {
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 1
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+                dim {
+                  size: -1
+                }
+                dim {
+                  size: 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 2
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  function {
+    signature {
+      name: "wait_until_n_batches_accumulated_true_3043410"
+      input_arg {
+        name: "resourceaccumulatortakegradient_boosted_trees_conditional_accumulator"
+        type: DT_RESOURCE
+      }
+      input_arg {
+        name: "boostedtreescalculatebestfeaturesplitv2_boosted_trees_last_layer_nodes_range"
+        type: DT_INT32
+      }
+      input_arg {
+        name: "boostedtreesupdateensemblev2_boosted_trees"
+        type: DT_RESOURCE
+      }
+      input_arg {
+        name: "identity_greaterequal"
+        type: DT_BOOL
+      }
+      output_arg {
+        name: "identity"
+        type: DT_BOOL
+      }
+      is_stateful: true
+    }
+    node_def {
+      name: "ResourceAccumulatorTakeGradient/num_required"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_INT32
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_INT32
+            tensor_shape {
+            }
+            int_val: 1
+          }
+        }
+      }
+    }
+    node_def {
+      name: "ResourceAccumulatorTakeGradient"
+      op: "ResourceAccumulatorTakeGradient"
+      input: "resourceaccumulatortakegradient_boosted_trees_conditional_accumulator"
+      input: "ResourceAccumulatorTakeGradient/num_required:output:0"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+              dim {
+                size: 95
+              }
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_FLOAT
+        }
+      }
+    }
+    node_def {
+      name: "unstack"
+      op: "Unpack"
+      input: "ResourceAccumulatorTakeGradient:average:0"
+      attr {
+        key: "T"
+        value {
+          type: DT_FLOAT
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+            shape {
+              dim {
+                size: 31
+              }
+              dim {
+                size: 1
+              }
+              dim {
+                size: 101
+              }
+              dim {
+                size: 12
+              }
+            }
+          }
+        }
+      }
+      attr {
+        key: "axis"
+        value {
+          i: 0
+        }
+      }
+      attr {
+        key: "num"
+        value {
+          i: 95
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesCalculateBestFeatureSplitV2/split_types"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+              dim {
+                size: 95
+              }
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_STRING
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_STRING
+            tensor_shape {
+              dim {
+                size: 95
+              }
+            }
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+            string_val: "inequality"
+          }
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesCalculateBestFeatureSplitV2/candidate_feature_ids"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+              dim {
+                size: 95
+              }
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_INT32
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_INT32
+            tensor_shape {
+              dim {
+                size: 95
+              }
+            }
+            tensor_content: "\000\000\000\000\001\000\000\000\002\000\000\000\003\000\000\000\004\000\000\000\005\000\000\000\006\000\000\000\007\000\000\000\010\000\000\000\t\000\000\000\n\000\000\000\013\000\000\000\014\000\000\000\r\000\000\000\016\000\000\000\017\000\000\000\020\000\000\000\021\000\000\000\022\000\000\000\023\000\000\000\024\000\000\000\025\000\000\000\026\000\000\000\027\000\000\000\030\000\000\000\031\000\000\000\032\000\000\000\033\000\000\000\034\000\000\000\035\000\000\000\036\000\000\000\037\000\000\000 \000\000\000!\000\000\000\"\000\000\000#\000\000\000$\000\000\000%\000\000\000&\000\000\000\'\000\000\000(\000\000\000)\000\000\000*\000\000\000+\000\000\000,\000\000\000-\000\000\000.\000\000\000/\000\000\0000\000\000\0001\000\000\0002\000\000\0003\000\000\0004\000\000\0005\000\000\0006\000\000\0007\000\000\0008\000\000\0009\000\000\000:\000\000\000;\000\000\000<\000\000\000=\000\000\000>\000\000\000?\000\000\000@\000\000\000A\000\000\000B\000\000\000C\000\000\000D\000\000\000E\000\000\000F\000\000\000G\000\000\000H\000\000\000I\000\000\000J\000\000\000K\000\000\000L\000\000\000M\000\000\000N\000\000\000O\000\000\000P\000\000\000Q\000\000\000R\000\000\000S\000\000\000T\000\000\000U\000\000\000V\000\000\000W\000\000\000X\000\000\000Y\000\000\000Z\000\000\000[\000\000\000\\\000\000\000]\000\000\000^\000\000\000"
+          }
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesCalculateBestFeatureSplitV2/l1"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_FLOAT
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_FLOAT
+            tensor_shape {
+            }
+            float_val: 0.0
+          }
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesCalculateBestFeatureSplitV2/l2"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_FLOAT
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_FLOAT
+            tensor_shape {
+            }
+            float_val: 0.0
+          }
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesCalculateBestFeatureSplitV2/tree_complexity"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_FLOAT
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_FLOAT
+            tensor_shape {
+            }
+            float_val: 0.0
+          }
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesCalculateBestFeatureSplitV2/min_node_weight"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_FLOAT
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_FLOAT
+            tensor_shape {
+            }
+            float_val: 0.0
+          }
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesCalculateBestFeatureSplitV2"
+      op: "BoostedTreesCalculateBestFeatureSplitV2"
+      input: "boostedtreescalculatebestfeaturesplitv2_boosted_trees_last_layer_nodes_range"
+      input: "unstack:output:0"
+      input: "unstack:output:1"
+      input: "unstack:output:2"
+      input: "unstack:output:3"
+      input: "unstack:output:4"
+      input: "unstack:output:5"
+      input: "unstack:output:6"
+      input: "unstack:output:7"
+      input: "unstack:output:8"
+      input: "unstack:output:9"
+      input: "unstack:output:10"
+      input: "unstack:output:11"
+      input: "unstack:output:12"
+      input: "unstack:output:13"
+      input: "unstack:output:14"
+      input: "unstack:output:15"
+      input: "unstack:output:16"
+      input: "unstack:output:17"
+      input: "unstack:output:18"
+      input: "unstack:output:19"
+      input: "unstack:output:20"
+      input: "unstack:output:21"
+      input: "unstack:output:22"
+      input: "unstack:output:23"
+      input: "unstack:output:24"
+      input: "unstack:output:25"
+      input: "unstack:output:26"
+      input: "unstack:output:27"
+      input: "unstack:output:28"
+      input: "unstack:output:29"
+      input: "unstack:output:30"
+      input: "unstack:output:31"
+      input: "unstack:output:32"
+      input: "unstack:output:33"
+      input: "unstack:output:34"
+      input: "unstack:output:35"
+      input: "unstack:output:36"
+      input: "unstack:output:37"
+      input: "unstack:output:38"
+      input: "unstack:output:39"
+      input: "unstack:output:40"
+      input: "unstack:output:41"
+      input: "unstack:output:42"
+      input: "unstack:output:43"
+      input: "unstack:output:44"
+      input: "unstack:output:45"
+      input: "unstack:output:46"
+      input: "unstack:output:47"
+      input: "unstack:output:48"
+      input: "unstack:output:49"
+      input: "unstack:output:50"
+      input: "unstack:output:51"
+      input: "unstack:output:52"
+      input: "unstack:output:53"
+      input: "unstack:output:54"
+      input: "unstack:output:55"
+      input: "unstack:output:56"
+      input: "unstack:output:57"
+      input: "unstack:output:58"
+      input: "unstack:output:59"
+      input: "unstack:output:60"
+      input: "unstack:output:61"
+      input: "unstack:output:62"
+      input: "unstack:output:63"
+      input: "unstack:output:64"
+      input: "unstack:output:65"
+      input: "unstack:output:66"
+      input: "unstack:output:67"
+      input: "unstack:output:68"
+      input: "unstack:output:69"
+      input: "unstack:output:70"
+      input: "unstack:output:71"
+      input: "unstack:output:72"
+      input: "unstack:output:73"
+      input: "unstack:output:74"
+      input: "unstack:output:75"
+      input: "unstack:output:76"
+      input: "unstack:output:77"
+      input: "unstack:output:78"
+      input: "unstack:output:79"
+      input: "unstack:output:80"
+      input: "unstack:output:81"
+      input: "unstack:output:82"
+      input: "unstack:output:83"
+      input: "unstack:output:84"
+      input: "unstack:output:85"
+      input: "unstack:output:86"
+      input: "unstack:output:87"
+      input: "unstack:output:88"
+      input: "unstack:output:89"
+      input: "unstack:output:90"
+      input: "unstack:output:91"
+      input: "unstack:output:92"
+      input: "unstack:output:93"
+      input: "unstack:output:94"
+      input: "BoostedTreesCalculateBestFeatureSplitV2/split_types:output:0"
+      input: "BoostedTreesCalculateBestFeatureSplitV2/candidate_feature_ids:output:0"
+      input: "BoostedTreesCalculateBestFeatureSplitV2/l1:output:0"
+      input: "BoostedTreesCalculateBestFeatureSplitV2/l2:output:0"
+      input: "BoostedTreesCalculateBestFeatureSplitV2/tree_complexity:output:0"
+      input: "BoostedTreesCalculateBestFeatureSplitV2/min_node_weight:output:0"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+              dim {
+                size: -1
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+              dim {
+                size: 3
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+              dim {
+                size: 3
+              }
+            }
+            shape {
+              dim {
+                size: -1
+              }
+            }
+          }
+        }
+      }
+      attr {
+        key: "logits_dimension"
+        value {
+          i: 3
+        }
+      }
+      attr {
+        key: "num_features"
+        value {
+          i: 95
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesUpdateEnsembleV2/max_depth"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_INT32
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_INT32
+            tensor_shape {
+            }
+            int_val: 5
+          }
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesUpdateEnsembleV2/learning_rate"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_FLOAT
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_FLOAT
+            tensor_shape {
+            }
+            float_val: 0.03999999910593033
+          }
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesUpdateEnsembleV2/pruning_mode"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_INT32
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_INT32
+            tensor_shape {
+            }
+            int_val: 0
+          }
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesUpdateEnsembleV2"
+      op: "BoostedTreesUpdateEnsembleV2"
+      input: "boostedtreesupdateensemblev2_boosted_trees"
+      input: "BoostedTreesCalculateBestFeatureSplitV2:feature_ids:0"
+      input: "BoostedTreesCalculateBestFeatureSplitV2:feature_dimensions:0"
+      input: "BoostedTreesCalculateBestFeatureSplitV2:node_ids:0"
+      input: "BoostedTreesCalculateBestFeatureSplitV2:gains:0"
+      input: "BoostedTreesCalculateBestFeatureSplitV2:thresholds:0"
+      input: "BoostedTreesCalculateBestFeatureSplitV2:left_node_contribs:0"
+      input: "BoostedTreesCalculateBestFeatureSplitV2:right_node_contribs:0"
+      input: "BoostedTreesCalculateBestFeatureSplitV2:split_with_default_directions:0"
+      input: "BoostedTreesUpdateEnsembleV2/max_depth:output:0"
+      input: "BoostedTreesUpdateEnsembleV2/learning_rate:output:0"
+      input: "BoostedTreesUpdateEnsembleV2/pruning_mode:output:0"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+          }
+        }
+      }
+      attr {
+        key: "logits_dimension"
+        value {
+          i: 3
+        }
+      }
+      attr {
+        key: "num_features"
+        value {
+          i: 1
+        }
+      }
+      attr {
+        key: "num_groups"
+        value {
+          i: 1
+        }
+      }
+    }
+    node_def {
+      name: "Identity"
+      op: "Identity"
+      input: "identity_greaterequal"
+      input: "^BoostedTreesUpdateEnsembleV2"
+      attr {
+        key: "T"
+        value {
+          type: DT_BOOL
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+    }
+    ret {
+      key: "identity"
+      value: "Identity:output:0"
+    }
+    attr {
+      key: "_input_shapes"
+      value {
+        list {
+          shape {
+            dim {
+              size: 2
+            }
+          }
+          shape {
+            dim {
+              size: 2
+            }
+          }
+          shape {
+          }
+          shape {
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 1
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+                dim {
+                  size: 2
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 3
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  function {
+    signature {
+      name: "head_assert_range_assert_less_equal_Assert_AssertGuard_true_3042253"
+      input_arg {
+        name: "identity_head_assert_range_assert_less_equal_all"
+        type: DT_BOOL
+      }
+      input_arg {
+        name: "placeholder"
+        type: DT_INT64
+      }
+      input_arg {
+        name: "placeholder_1"
+        type: DT_INT64
+      }
+      output_arg {
+        name: "identity"
+        type: DT_BOOL
+      }
+    }
+    node_def {
+      name: "NoOp"
+      op: "NoOp"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Identity"
+      op: "Identity"
+      input: "identity_head_assert_range_assert_less_equal_all"
+      input: "^NoOp"
+      attr {
+        key: "T"
+        value {
+          type: DT_BOOL
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+    }
+    ret {
+      key: "identity"
+      value: "Identity:output:0"
+    }
+    attr {
+      key: "_input_shapes"
+      value {
+        list {
+          shape {
+          }
+          shape {
+            dim {
+              size: -1
+            }
+            dim {
+              size: 1
+            }
+          }
+          shape {
+          }
+        }
+      }
+    }
+    arg_attr {
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 1
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+                dim {
+                  size: -1
+                }
+                dim {
+                  size: 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 2
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  function {
+    signature {
+      name: "head_cond_false_3042379"
       input_arg {
         name: "placeholder"
         type: DT_FLOAT
@@ -34363,7 +36873,7 @@ library {
         key: "else_branch"
         value {
           func {
-            name: "UpdateQuantile_wait_until_quaniles_accumulated_false_11127"
+            name: "UpdateQuantile_wait_until_quaniles_accumulated_false_3044034"
           }
         }
       }
@@ -34380,7 +36890,7 @@ library {
         key: "then_branch"
         value {
           func {
-            name: "UpdateQuantile_wait_until_quaniles_accumulated_true_11126"
+            name: "UpdateQuantile_wait_until_quaniles_accumulated_true_3044033"
           }
         }
       }
@@ -37691,1145 +40201,23 @@ library {
   }
   function {
     signature {
-      name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_true_9371"
-      input_arg {
-        name: "identity_head_assert_range_assert_non_negative_assert_less_equal_all"
-        type: DT_BOOL
-      }
-      input_arg {
-        name: "placeholder"
-        type: DT_INT64
-      }
-      output_arg {
-        name: "identity"
-        type: DT_BOOL
-      }
-    }
-    node_def {
-      name: "NoOp"
-      op: "NoOp"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Identity"
-      op: "Identity"
-      input: "identity_head_assert_range_assert_non_negative_assert_less_equal_all"
-      input: "^NoOp"
-      attr {
-        key: "T"
-        value {
-          type: DT_BOOL
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-    }
-    ret {
-      key: "identity"
-      value: "Identity:output:0"
-    }
-    attr {
-      key: "_input_shapes"
-      value {
-        list {
-          shape {
-          }
-          shape {
-            dim {
-              size: -1
-            }
-            dim {
-              size: 1
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 1
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-                dim {
-                  size: -1
-                }
-                dim {
-                  size: 1
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  function {
-    signature {
-      name: "head_assert_range_assert_less_equal_Assert_AssertGuard_false_9347"
-      input_arg {
-        name: "assert_head_assert_range_assert_less_equal_all"
-        type: DT_BOOL
-      }
-      input_arg {
-        name: "assert_head_labels"
-        type: DT_INT64
-      }
-      input_arg {
-        name: "assert_head_assert_range_const"
-        type: DT_INT64
-      }
-      output_arg {
-        name: "identity"
-        type: DT_BOOL
-      }
-      is_stateful: true
-    }
-    node_def {
-      name: "Assert/data_0"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_STRING
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_STRING
-            tensor_shape {
-            }
-            string_val: "Labels must <= n_classes - 1"
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Assert/data_1"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_STRING
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_STRING
-            tensor_shape {
-            }
-            string_val: "Condition x <= y did not hold element-wise:"
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Assert/data_2"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_STRING
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_STRING
-            tensor_shape {
-            }
-            string_val: "x (head/labels:0) = "
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Assert/data_4"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_STRING
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_STRING
-            tensor_shape {
-            }
-            string_val: "y (head/assert_range/Const:0) = "
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Assert"
-      op: "Assert"
-      input: "assert_head_assert_range_assert_less_equal_all"
-      input: "Assert/data_0:output:0"
-      input: "Assert/data_1:output:0"
-      input: "Assert/data_2:output:0"
-      input: "assert_head_labels"
-      input: "Assert/data_4:output:0"
-      input: "assert_head_assert_range_const"
-      attr {
-        key: "T"
-        value {
-          list {
-            type: DT_STRING
-            type: DT_STRING
-            type: DT_STRING
-            type: DT_INT64
-            type: DT_STRING
-            type: DT_INT64
-          }
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-          }
-        }
-      }
-      attr {
-        key: "summarize"
-        value {
-          i: 3
-        }
-      }
-    }
-    node_def {
-      name: "Identity"
-      op: "Identity"
-      input: "assert_head_assert_range_assert_less_equal_all"
-      input: "^Assert"
-      attr {
-        key: "T"
-        value {
-          type: DT_BOOL
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-    }
-    ret {
-      key: "identity"
-      value: "Identity:output:0"
-    }
-    attr {
-      key: "_input_shapes"
-      value {
-        list {
-          shape {
-          }
-          shape {
-            dim {
-              size: -1
-            }
-            dim {
-              size: 1
-            }
-          }
-          shape {
-          }
-        }
-      }
-    }
-    arg_attr {
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 1
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-                dim {
-                  size: -1
-                }
-                dim {
-                  size: 1
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 2
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  function {
-    signature {
-      name: "UpdateQuantile_wait_until_quaniles_accumulated_true_11126"
-      input_arg {
-        name: "resourceaccumulatortakegradient_updatequantile_conditional_accumulator"
-        type: DT_RESOURCE
-      }
-      input_arg {
-        name: "boostedtreesquantilestreamresourceflush_boosted_trees_quantileaccumulator"
-        type: DT_RESOURCE
-      }
-      input_arg {
-        name: "assignvariableop_boosted_trees_are_boundaries_ready"
-        type: DT_RESOURCE
-        handle_data {
-          dtype: DT_BOOL
-          shape {
-          }
-        }
-      }
-      input_arg {
-        name: "identity_updatequantile_greaterequal"
-        type: DT_BOOL
-      }
-      output_arg {
-        name: "identity"
-        type: DT_BOOL
-      }
-      is_stateful: true
-    }
-    node_def {
-      name: "ResourceAccumulatorTakeGradient/num_required"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_INT32
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_INT32
-            tensor_shape {
-            }
-            int_val: 1
-          }
-        }
-      }
-    }
-    node_def {
-      name: "ResourceAccumulatorTakeGradient"
-      op: "ResourceAccumulatorTakeGradient"
-      input: "resourceaccumulatortakegradient_updatequantile_conditional_accumulator"
-      input: "ResourceAccumulatorTakeGradient/num_required:output:0"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_FLOAT
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesQuantileStreamResourceFlush/num_buckets"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_INT64
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_INT64
-            tensor_shape {
-            }
-            int64_val: 100
-          }
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesQuantileStreamResourceFlush"
-      op: "BoostedTreesQuantileStreamResourceFlush"
-      input: "boostedtreesquantilestreamresourceflush_boosted_trees_quantileaccumulator"
-      input: "BoostedTreesQuantileStreamResourceFlush/num_buckets:output:0"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-          }
-        }
-      }
-      attr {
-        key: "generate_quantiles"
-        value {
-          b: false
-        }
-      }
-    }
-    node_def {
-      name: "Const"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_BOOL
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_BOOL
-            tensor_shape {
-            }
-            bool_val: true
-          }
-        }
-      }
-    }
-    node_def {
-      name: "AssignVariableOp"
-      op: "AssignVariableOp"
-      input: "assignvariableop_boosted_trees_are_boundaries_ready"
-      input: "Const:output:0"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_BOOL
-        }
-      }
-    }
-    node_def {
-      name: "group_deps"
-      op: "NoOp"
-      input: "^AssignVariableOp"
-      input: "^BoostedTreesQuantileStreamResourceFlush"
-      input: "^ResourceAccumulatorTakeGradient"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Identity"
-      op: "Identity"
-      input: "identity_updatequantile_greaterequal"
-      input: "^group_deps"
-      attr {
-        key: "T"
-        value {
-          type: DT_BOOL
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-    }
-    ret {
-      key: "identity"
-      value: "Identity:output:0"
-    }
-    attr {
-      key: "_input_shapes"
-      value {
-        list {
-          shape {
-            dim {
-              size: 2
-            }
-          }
-          shape {
-          }
-          shape {
-          }
-          shape {
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 3
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  function {
-    signature {
-      name: "head_assert_range_assert_less_equal_Assert_AssertGuard_true_9346"
-      input_arg {
-        name: "identity_head_assert_range_assert_less_equal_all"
-        type: DT_BOOL
-      }
-      input_arg {
-        name: "placeholder"
-        type: DT_INT64
-      }
-      input_arg {
-        name: "placeholder_1"
-        type: DT_INT64
-      }
-      output_arg {
-        name: "identity"
-        type: DT_BOOL
-      }
-    }
-    node_def {
-      name: "NoOp"
-      op: "NoOp"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Identity"
-      op: "Identity"
-      input: "identity_head_assert_range_assert_less_equal_all"
-      input: "^NoOp"
-      attr {
-        key: "T"
-        value {
-          type: DT_BOOL
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-    }
-    ret {
-      key: "identity"
-      value: "Identity:output:0"
-    }
-    attr {
-      key: "_input_shapes"
-      value {
-        list {
-          shape {
-          }
-          shape {
-            dim {
-              size: -1
-            }
-            dim {
-              size: 1
-            }
-          }
-          shape {
-          }
-        }
-      }
-    }
-    arg_attr {
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 1
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-                dim {
-                  size: -1
-                }
-                dim {
-                  size: 1
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 2
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  function {
-    signature {
-      name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_false_9372"
-      input_arg {
-        name: "assert_head_assert_range_assert_non_negative_assert_less_equal_all"
-        type: DT_BOOL
-      }
-      input_arg {
-        name: "assert_head_labels"
-        type: DT_INT64
-      }
-      output_arg {
-        name: "identity"
-        type: DT_BOOL
-      }
-      is_stateful: true
-    }
-    node_def {
-      name: "Assert/data_0"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_STRING
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_STRING
-            tensor_shape {
-            }
-            string_val: "Labels must >= 0.  "
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Assert/data_1"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_STRING
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_STRING
-            tensor_shape {
-            }
-            string_val: "Condition x >= 0 did not hold element-wise:"
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Assert/data_2"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_STRING
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_STRING
-            tensor_shape {
-            }
-            string_val: "x (head/labels:0) = "
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Assert"
-      op: "Assert"
-      input: "assert_head_assert_range_assert_non_negative_assert_less_equal_all"
-      input: "Assert/data_0:output:0"
-      input: "Assert/data_1:output:0"
-      input: "Assert/data_2:output:0"
-      input: "assert_head_labels"
-      attr {
-        key: "T"
-        value {
-          list {
-            type: DT_STRING
-            type: DT_STRING
-            type: DT_STRING
-            type: DT_INT64
-          }
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-          }
-        }
-      }
-      attr {
-        key: "summarize"
-        value {
-          i: 3
-        }
-      }
-    }
-    node_def {
-      name: "Identity"
-      op: "Identity"
-      input: "assert_head_assert_range_assert_non_negative_assert_less_equal_all"
-      input: "^Assert"
-      attr {
-        key: "T"
-        value {
-          type: DT_BOOL
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-    }
-    ret {
-      key: "identity"
-      value: "Identity:output:0"
-    }
-    attr {
-      key: "_input_shapes"
-      value {
-        list {
-          shape {
-          }
-          shape {
-            dim {
-              size: -1
-            }
-            dim {
-              size: 1
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 1
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-                dim {
-                  size: -1
-                }
-                dim {
-                  size: 1
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  function {
-    signature {
-      name: "wait_until_n_batches_accumulated_false_10504"
+      name: "global_step_cond_false_3041526"
       input_arg {
         name: "placeholder"
         type: DT_RESOURCE
       }
       input_arg {
-        name: "placeholder_1"
-        type: DT_INT32
-      }
-      input_arg {
-        name: "placeholder_2"
-        type: DT_RESOURCE
-      }
-      input_arg {
-        name: "identity_greaterequal"
-        type: DT_BOOL
-      }
-      output_arg {
-        name: "identity"
-        type: DT_BOOL
-      }
-    }
-    node_def {
-      name: "NoOp"
-      op: "NoOp"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Identity"
-      op: "Identity"
-      input: "identity_greaterequal"
-      input: "^NoOp"
-      attr {
-        key: "T"
-        value {
-          type: DT_BOOL
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-    }
-    ret {
-      key: "identity"
-      value: "Identity:output:0"
-    }
-    attr {
-      key: "_input_shapes"
-      value {
-        list {
-          shape {
-            dim {
-              size: 2
-            }
-          }
-          shape {
-            dim {
-              size: 2
-            }
-          }
-          shape {
-          }
-          shape {
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 1
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-                dim {
-                  size: 2
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 3
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  function {
-    signature {
-      name: "global_step_cond_true_8618"
-      input_arg {
-        name: "read_readvariableop_global_step"
-        type: DT_RESOURCE
-        handle_data {
-          dtype: DT_INT64
-          shape {
-          }
-        }
-      }
-      input_arg {
-        name: "placeholder"
+        name: "global_step_initializer_zeros_0"
         type: DT_INT64
       }
       output_arg {
-        name: "identity"
+        name: "global_step_initializer_zeros"
         type: DT_INT64
-      }
-      is_stateful: true
-    }
-    node_def {
-      name: "Read/ReadVariableOp"
-      op: "ReadVariableOp"
-      input: "read_readvariableop_global_step"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_INT64
-        }
-      }
-    }
-    node_def {
-      name: "Identity"
-      op: "Identity"
-      input: "Read/ReadVariableOp:value:0"
-      attr {
-        key: "T"
-        value {
-          type: DT_INT64
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
       }
     }
     ret {
-      key: "identity"
-      value: "Identity:output:0"
+      key: "global_step_initializer_zeros"
+      value: "global_step_initializer_zeros_0"
     }
     attr {
       key: "_input_shapes"
@@ -38859,7 +40247,7 @@ library {
   }
   function {
     signature {
-      name: "head_cond_true_9471"
+      name: "head_cond_true_3042378"
       input_arg {
         name: "gradients_head_weighted_loss_value_grad_div_no_nan_head_weighted_loss_num_present"
         type: DT_FLOAT
@@ -67400,7 +68788,7 @@ library {
         key: "else_branch"
         value {
           func {
-            name: "wait_until_n_batches_accumulated_false_10504"
+            name: "wait_until_n_batches_accumulated_false_3043411"
           }
         }
       }
@@ -67417,7 +68805,7 @@ library {
         key: "then_branch"
         value {
           func {
-            name: "wait_until_n_batches_accumulated_true_10503"
+            name: "wait_until_n_batches_accumulated_true_3043410"
           }
         }
       }
@@ -70820,7 +72208,453 @@ library {
   }
   function {
     signature {
-      name: "UpdateQuantile_wait_until_quaniles_accumulated_false_11127"
+      name: "global_step_cond_true_3041525"
+      input_arg {
+        name: "read_readvariableop_global_step"
+        type: DT_RESOURCE
+        handle_data {
+          dtype: DT_INT64
+          shape {
+          }
+        }
+      }
+      input_arg {
+        name: "placeholder"
+        type: DT_INT64
+      }
+      output_arg {
+        name: "identity"
+        type: DT_INT64
+      }
+      is_stateful: true
+    }
+    node_def {
+      name: "Read/ReadVariableOp"
+      op: "ReadVariableOp"
+      input: "read_readvariableop_global_step"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_INT64
+        }
+      }
+    }
+    node_def {
+      name: "Identity"
+      op: "Identity"
+      input: "Read/ReadVariableOp:value:0"
+      attr {
+        key: "T"
+        value {
+          type: DT_INT64
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+    }
+    ret {
+      key: "identity"
+      value: "Identity:output:0"
+    }
+    attr {
+      key: "_input_shapes"
+      value {
+        list {
+          shape {
+          }
+          shape {
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 1
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  function {
+    signature {
+      name: "UpdateQuantile_wait_until_quaniles_accumulated_true_3044033"
+      input_arg {
+        name: "resourceaccumulatortakegradient_updatequantile_conditional_accumulator"
+        type: DT_RESOURCE
+      }
+      input_arg {
+        name: "boostedtreesquantilestreamresourceflush_boosted_trees_quantileaccumulator"
+        type: DT_RESOURCE
+      }
+      input_arg {
+        name: "assignvariableop_boosted_trees_are_boundaries_ready"
+        type: DT_RESOURCE
+        handle_data {
+          dtype: DT_BOOL
+          shape {
+          }
+        }
+      }
+      input_arg {
+        name: "identity_updatequantile_greaterequal"
+        type: DT_BOOL
+      }
+      output_arg {
+        name: "identity"
+        type: DT_BOOL
+      }
+      is_stateful: true
+    }
+    node_def {
+      name: "ResourceAccumulatorTakeGradient/num_required"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_INT32
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_INT32
+            tensor_shape {
+            }
+            int_val: 1
+          }
+        }
+      }
+    }
+    node_def {
+      name: "ResourceAccumulatorTakeGradient"
+      op: "ResourceAccumulatorTakeGradient"
+      input: "resourceaccumulatortakegradient_updatequantile_conditional_accumulator"
+      input: "ResourceAccumulatorTakeGradient/num_required:output:0"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_FLOAT
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesQuantileStreamResourceFlush/num_buckets"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_INT64
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_INT64
+            tensor_shape {
+            }
+            int64_val: 100
+          }
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesQuantileStreamResourceFlush"
+      op: "BoostedTreesQuantileStreamResourceFlush"
+      input: "boostedtreesquantilestreamresourceflush_boosted_trees_quantileaccumulator"
+      input: "BoostedTreesQuantileStreamResourceFlush/num_buckets:output:0"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+          }
+        }
+      }
+      attr {
+        key: "generate_quantiles"
+        value {
+          b: false
+        }
+      }
+    }
+    node_def {
+      name: "Const"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_BOOL
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_BOOL
+            tensor_shape {
+            }
+            bool_val: true
+          }
+        }
+      }
+    }
+    node_def {
+      name: "AssignVariableOp"
+      op: "AssignVariableOp"
+      input: "assignvariableop_boosted_trees_are_boundaries_ready"
+      input: "Const:output:0"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_BOOL
+        }
+      }
+    }
+    node_def {
+      name: "group_deps"
+      op: "NoOp"
+      input: "^AssignVariableOp"
+      input: "^BoostedTreesQuantileStreamResourceFlush"
+      input: "^ResourceAccumulatorTakeGradient"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Identity"
+      op: "Identity"
+      input: "identity_updatequantile_greaterequal"
+      input: "^group_deps"
+      attr {
+        key: "T"
+        value {
+          type: DT_BOOL
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+    }
+    ret {
+      key: "identity"
+      value: "Identity:output:0"
+    }
+    attr {
+      key: "_input_shapes"
+      value {
+        list {
+          shape {
+            dim {
+              size: 2
+            }
+          }
+          shape {
+          }
+          shape {
+          }
+          shape {
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 3
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  function {
+    signature {
+      name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_true_3042278"
+      input_arg {
+        name: "identity_head_assert_range_assert_non_negative_assert_less_equal_all"
+        type: DT_BOOL
+      }
+      input_arg {
+        name: "placeholder"
+        type: DT_INT64
+      }
+      output_arg {
+        name: "identity"
+        type: DT_BOOL
+      }
+    }
+    node_def {
+      name: "NoOp"
+      op: "NoOp"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Identity"
+      op: "Identity"
+      input: "identity_head_assert_range_assert_non_negative_assert_less_equal_all"
+      input: "^NoOp"
+      attr {
+        key: "T"
+        value {
+          type: DT_BOOL
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+    }
+    ret {
+      key: "identity"
+      value: "Identity:output:0"
+    }
+    attr {
+      key: "_input_shapes"
+      value {
+        list {
+          shape {
+          }
+          shape {
+            dim {
+              size: -1
+            }
+            dim {
+              size: 1
+            }
+          }
+        }
+      }
+    }
+    arg_attr {
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 1
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+                dim {
+                  size: -1
+                }
+                dim {
+                  size: 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  function {
+    signature {
+      name: "UpdateQuantile_wait_until_quaniles_accumulated_false_3044034"
       input_arg {
         name: "placeholder"
         type: DT_RESOURCE
@@ -70913,63 +72747,17 @@ library {
   }
   function {
     signature {
-      name: "global_step_cond_false_8619"
+      name: "wait_until_n_batches_accumulated_false_3043411"
       input_arg {
         name: "placeholder"
         type: DT_RESOURCE
       }
       input_arg {
-        name: "global_step_initializer_zeros_0"
-        type: DT_INT64
-      }
-      output_arg {
-        name: "global_step_initializer_zeros"
-        type: DT_INT64
-      }
-    }
-    ret {
-      key: "global_step_initializer_zeros"
-      value: "global_step_initializer_zeros_0"
-    }
-    attr {
-      key: "_input_shapes"
-      value {
-        list {
-          shape {
-          }
-          shape {
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 1
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  function {
-    signature {
-      name: "wait_until_n_batches_accumulated_true_10503"
-      input_arg {
-        name: "resourceaccumulatortakegradient_boosted_trees_conditional_accumulator"
-        type: DT_RESOURCE
-      }
-      input_arg {
-        name: "boostedtreescalculatebestfeaturesplitv2_boosted_trees_last_layer_nodes_range"
+        name: "placeholder_1"
         type: DT_INT32
       }
       input_arg {
-        name: "boostedtreesupdateensemblev2_boosted_trees"
+        name: "placeholder_2"
         type: DT_RESOURCE
       }
       input_arg {
@@ -70980,2019 +72768,15 @@ library {
         name: "identity"
         type: DT_BOOL
       }
-      is_stateful: true
     }
     node_def {
-      name: "ResourceAccumulatorTakeGradient/num_required"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_INT32
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_INT32
-            tensor_shape {
-            }
-            int_val: 1
-          }
-        }
-      }
-    }
-    node_def {
-      name: "ResourceAccumulatorTakeGradient"
-      op: "ResourceAccumulatorTakeGradient"
-      input: "resourceaccumulatortakegradient_boosted_trees_conditional_accumulator"
-      input: "ResourceAccumulatorTakeGradient/num_required:output:0"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-              dim {
-                size: 95
-              }
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_FLOAT
-        }
-      }
-    }
-    node_def {
-      name: "unstack"
-      op: "Unpack"
-      input: "ResourceAccumulatorTakeGradient:average:0"
-      attr {
-        key: "T"
-        value {
-          type: DT_FLOAT
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-            shape {
-              dim {
-                size: 31
-              }
-              dim {
-                size: 1
-              }
-              dim {
-                size: 101
-              }
-              dim {
-                size: 12
-              }
-            }
-          }
-        }
-      }
-      attr {
-        key: "axis"
-        value {
-          i: 0
-        }
-      }
-      attr {
-        key: "num"
-        value {
-          i: 95
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesCalculateBestFeatureSplitV2/split_types"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-              dim {
-                size: 95
-              }
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_STRING
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_STRING
-            tensor_shape {
-              dim {
-                size: 95
-              }
-            }
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-            string_val: "inequality"
-          }
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesCalculateBestFeatureSplitV2/candidate_feature_ids"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-              dim {
-                size: 95
-              }
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_INT32
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_INT32
-            tensor_shape {
-              dim {
-                size: 95
-              }
-            }
-            tensor_content: "\000\000\000\000\001\000\000\000\002\000\000\000\003\000\000\000\004\000\000\000\005\000\000\000\006\000\000\000\007\000\000\000\010\000\000\000\t\000\000\000\n\000\000\000\013\000\000\000\014\000\000\000\r\000\000\000\016\000\000\000\017\000\000\000\020\000\000\000\021\000\000\000\022\000\000\000\023\000\000\000\024\000\000\000\025\000\000\000\026\000\000\000\027\000\000\000\030\000\000\000\031\000\000\000\032\000\000\000\033\000\000\000\034\000\000\000\035\000\000\000\036\000\000\000\037\000\000\000 \000\000\000!\000\000\000\"\000\000\000#\000\000\000$\000\000\000%\000\000\000&\000\000\000\'\000\000\000(\000\000\000)\000\000\000*\000\000\000+\000\000\000,\000\000\000-\000\000\000.\000\000\000/\000\000\0000\000\000\0001\000\000\0002\000\000\0003\000\000\0004\000\000\0005\000\000\0006\000\000\0007\000\000\0008\000\000\0009\000\000\000:\000\000\000;\000\000\000<\000\000\000=\000\000\000>\000\000\000?\000\000\000@\000\000\000A\000\000\000B\000\000\000C\000\000\000D\000\000\000E\000\000\000F\000\000\000G\000\000\000H\000\000\000I\000\000\000J\000\000\000K\000\000\000L\000\000\000M\000\000\000N\000\000\000O\000\000\000P\000\000\000Q\000\000\000R\000\000\000S\000\000\000T\000\000\000U\000\000\000V\000\000\000W\000\000\000X\000\000\000Y\000\000\000Z\000\000\000[\000\000\000\\\000\000\000]\000\000\000^\000\000\000"
-          }
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesCalculateBestFeatureSplitV2/l1"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_FLOAT
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_FLOAT
-            tensor_shape {
-            }
-            float_val: 0.0
-          }
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesCalculateBestFeatureSplitV2/l2"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_FLOAT
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_FLOAT
-            tensor_shape {
-            }
-            float_val: 0.0
-          }
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesCalculateBestFeatureSplitV2/tree_complexity"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_FLOAT
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_FLOAT
-            tensor_shape {
-            }
-            float_val: 0.0
-          }
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesCalculateBestFeatureSplitV2/min_node_weight"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_FLOAT
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_FLOAT
-            tensor_shape {
-            }
-            float_val: 0.0
-          }
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesCalculateBestFeatureSplitV2"
-      op: "BoostedTreesCalculateBestFeatureSplitV2"
-      input: "boostedtreescalculatebestfeaturesplitv2_boosted_trees_last_layer_nodes_range"
-      input: "unstack:output:0"
-      input: "unstack:output:1"
-      input: "unstack:output:2"
-      input: "unstack:output:3"
-      input: "unstack:output:4"
-      input: "unstack:output:5"
-      input: "unstack:output:6"
-      input: "unstack:output:7"
-      input: "unstack:output:8"
-      input: "unstack:output:9"
-      input: "unstack:output:10"
-      input: "unstack:output:11"
-      input: "unstack:output:12"
-      input: "unstack:output:13"
-      input: "unstack:output:14"
-      input: "unstack:output:15"
-      input: "unstack:output:16"
-      input: "unstack:output:17"
-      input: "unstack:output:18"
-      input: "unstack:output:19"
-      input: "unstack:output:20"
-      input: "unstack:output:21"
-      input: "unstack:output:22"
-      input: "unstack:output:23"
-      input: "unstack:output:24"
-      input: "unstack:output:25"
-      input: "unstack:output:26"
-      input: "unstack:output:27"
-      input: "unstack:output:28"
-      input: "unstack:output:29"
-      input: "unstack:output:30"
-      input: "unstack:output:31"
-      input: "unstack:output:32"
-      input: "unstack:output:33"
-      input: "unstack:output:34"
-      input: "unstack:output:35"
-      input: "unstack:output:36"
-      input: "unstack:output:37"
-      input: "unstack:output:38"
-      input: "unstack:output:39"
-      input: "unstack:output:40"
-      input: "unstack:output:41"
-      input: "unstack:output:42"
-      input: "unstack:output:43"
-      input: "unstack:output:44"
-      input: "unstack:output:45"
-      input: "unstack:output:46"
-      input: "unstack:output:47"
-      input: "unstack:output:48"
-      input: "unstack:output:49"
-      input: "unstack:output:50"
-      input: "unstack:output:51"
-      input: "unstack:output:52"
-      input: "unstack:output:53"
-      input: "unstack:output:54"
-      input: "unstack:output:55"
-      input: "unstack:output:56"
-      input: "unstack:output:57"
-      input: "unstack:output:58"
-      input: "unstack:output:59"
-      input: "unstack:output:60"
-      input: "unstack:output:61"
-      input: "unstack:output:62"
-      input: "unstack:output:63"
-      input: "unstack:output:64"
-      input: "unstack:output:65"
-      input: "unstack:output:66"
-      input: "unstack:output:67"
-      input: "unstack:output:68"
-      input: "unstack:output:69"
-      input: "unstack:output:70"
-      input: "unstack:output:71"
-      input: "unstack:output:72"
-      input: "unstack:output:73"
-      input: "unstack:output:74"
-      input: "unstack:output:75"
-      input: "unstack:output:76"
-      input: "unstack:output:77"
-      input: "unstack:output:78"
-      input: "unstack:output:79"
-      input: "unstack:output:80"
-      input: "unstack:output:81"
-      input: "unstack:output:82"
-      input: "unstack:output:83"
-      input: "unstack:output:84"
-      input: "unstack:output:85"
-      input: "unstack:output:86"
-      input: "unstack:output:87"
-      input: "unstack:output:88"
-      input: "unstack:output:89"
-      input: "unstack:output:90"
-      input: "unstack:output:91"
-      input: "unstack:output:92"
-      input: "unstack:output:93"
-      input: "unstack:output:94"
-      input: "BoostedTreesCalculateBestFeatureSplitV2/split_types:output:0"
-      input: "BoostedTreesCalculateBestFeatureSplitV2/candidate_feature_ids:output:0"
-      input: "BoostedTreesCalculateBestFeatureSplitV2/l1:output:0"
-      input: "BoostedTreesCalculateBestFeatureSplitV2/l2:output:0"
-      input: "BoostedTreesCalculateBestFeatureSplitV2/tree_complexity:output:0"
-      input: "BoostedTreesCalculateBestFeatureSplitV2/min_node_weight:output:0"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-              dim {
-                size: -1
-              }
-            }
-            shape {
-              dim {
-                size: -1
-              }
-            }
-            shape {
-              dim {
-                size: -1
-              }
-            }
-            shape {
-              dim {
-                size: -1
-              }
-            }
-            shape {
-              dim {
-                size: -1
-              }
-            }
-            shape {
-              dim {
-                size: -1
-              }
-              dim {
-                size: 3
-              }
-            }
-            shape {
-              dim {
-                size: -1
-              }
-              dim {
-                size: 3
-              }
-            }
-            shape {
-              dim {
-                size: -1
-              }
-            }
-          }
-        }
-      }
-      attr {
-        key: "logits_dimension"
-        value {
-          i: 3
-        }
-      }
-      attr {
-        key: "num_features"
-        value {
-          i: 95
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesUpdateEnsembleV2/max_depth"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_INT32
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_INT32
-            tensor_shape {
-            }
-            int_val: 5
-          }
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesUpdateEnsembleV2/learning_rate"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_FLOAT
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_FLOAT
-            tensor_shape {
-            }
-            float_val: 0.03999999910593033
-          }
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesUpdateEnsembleV2/pruning_mode"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_INT32
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_INT32
-            tensor_shape {
-            }
-            int_val: 0
-          }
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesUpdateEnsembleV2"
-      op: "BoostedTreesUpdateEnsembleV2"
-      input: "boostedtreesupdateensemblev2_boosted_trees"
-      input: "BoostedTreesCalculateBestFeatureSplitV2:feature_ids:0"
-      input: "BoostedTreesCalculateBestFeatureSplitV2:feature_dimensions:0"
-      input: "BoostedTreesCalculateBestFeatureSplitV2:node_ids:0"
-      input: "BoostedTreesCalculateBestFeatureSplitV2:gains:0"
-      input: "BoostedTreesCalculateBestFeatureSplitV2:thresholds:0"
-      input: "BoostedTreesCalculateBestFeatureSplitV2:left_node_contribs:0"
-      input: "BoostedTreesCalculateBestFeatureSplitV2:right_node_contribs:0"
-      input: "BoostedTreesCalculateBestFeatureSplitV2:split_with_default_directions:0"
-      input: "BoostedTreesUpdateEnsembleV2/max_depth:output:0"
-      input: "BoostedTreesUpdateEnsembleV2/learning_rate:output:0"
-      input: "BoostedTreesUpdateEnsembleV2/pruning_mode:output:0"
+      name: "NoOp"
+      op: "NoOp"
       attr {
         key: "_output_shapes"
         value {
           list {
           }
-        }
-      }
-      attr {
-        key: "logits_dimension"
-        value {
-          i: 3
-        }
-      }
-      attr {
-        key: "num_features"
-        value {
-          i: 1
-        }
-      }
-      attr {
-        key: "num_groups"
-        value {
-          i: 1
         }
       }
     }
@@ -73000,7 +72784,7 @@ library {
       name: "Identity"
       op: "Identity"
       input: "identity_greaterequal"
-      input: "^BoostedTreesUpdateEnsembleV2"
+      input: "^NoOp"
       attr {
         key: "T"
         value {
@@ -73067,6 +72851,222 @@ library {
           value {
             list {
               shape {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  function {
+    signature {
+      name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_false_3042279"
+      input_arg {
+        name: "assert_head_assert_range_assert_non_negative_assert_less_equal_all"
+        type: DT_BOOL
+      }
+      input_arg {
+        name: "assert_head_labels"
+        type: DT_INT64
+      }
+      output_arg {
+        name: "identity"
+        type: DT_BOOL
+      }
+      is_stateful: true
+    }
+    node_def {
+      name: "Assert/data_0"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_STRING
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_STRING
+            tensor_shape {
+            }
+            string_val: "Labels must >= 0.  "
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Assert/data_1"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_STRING
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_STRING
+            tensor_shape {
+            }
+            string_val: "Condition x >= 0 did not hold element-wise:"
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Assert/data_2"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_STRING
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_STRING
+            tensor_shape {
+            }
+            string_val: "x (head/labels:0) = "
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Assert"
+      op: "Assert"
+      input: "assert_head_assert_range_assert_non_negative_assert_less_equal_all"
+      input: "Assert/data_0:output:0"
+      input: "Assert/data_1:output:0"
+      input: "Assert/data_2:output:0"
+      input: "assert_head_labels"
+      attr {
+        key: "T"
+        value {
+          list {
+            type: DT_STRING
+            type: DT_STRING
+            type: DT_STRING
+            type: DT_INT64
+          }
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+          }
+        }
+      }
+      attr {
+        key: "summarize"
+        value {
+          i: 3
+        }
+      }
+    }
+    node_def {
+      name: "Identity"
+      op: "Identity"
+      input: "assert_head_assert_range_assert_non_negative_assert_less_equal_all"
+      input: "^Assert"
+      attr {
+        key: "T"
+        value {
+          type: DT_BOOL
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+    }
+    ret {
+      key: "identity"
+      value: "Identity:output:0"
+    }
+    attr {
+      key: "_input_shapes"
+      value {
+        list {
+          shape {
+          }
+          shape {
+            dim {
+              size: -1
+            }
+            dim {
+              size: 1
+            }
+          }
+        }
+      }
+    }
+    arg_attr {
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 1
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+                dim {
+                  size: -1
+                }
+                dim {
+                  size: 1
+                }
               }
             }
           }

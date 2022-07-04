@@ -124,10 +124,11 @@ class MakePomaDnnLinearModel:
         callback = tf.keras.callbacks.EarlyStopping(monitor='loss', patience=5)
 
         combined_model.fit([x_train_scaled, x_train_scaled], y_train_encoding,
-                           validation_data=[[x_eval_scaled, y_eval_encoding]],
+                           # validation_data=[[x_eval_scaled, y_eval_encoding]],
+                           validation_data=([x_eval_scaled, x_eval_scaled], y_eval_encoding),
                            epochs=1000, verbose=0, validation_split=0.2, callbacks=[callback])
 
-        combined_model.evaluate([x_test_scaled, x_test_scaled], y_test_encoding, batch_size=64)
+        combined_model.evaluate([x_test_scaled, x_test_scaled], y_test_encoding)
 
         try:
             # Save the entire model to a HDF5 file.

@@ -1988,3 +1988,873 @@ werkzeug.routing.BuildError: Could not build url for endpoint '/file-upload'. Di
  * Restarting with stat
  * Debugger is active!
  * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+165.22.211.149 - - [28/Sep/2021 16:55:32] "[33mGET / HTTP/1.0[0m" 404 -
+94.102.49.193 - - [30/Sep/2021 07:23:50] "[33mGET / HTTP/1.1[0m" 404 -
+94.102.49.193 - - [30/Sep/2021 07:23:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+94.102.49.193 - - [30/Sep/2021 07:24:05] code 400, message Bad request syntax ('\x03xçTa\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+94.102.49.193 - - [30/Sep/2021 07:24:05] "[35m[1mxçTa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [0m" HTTPStatus.BAD_REQUEST -
+34.79.107.251 - - [30/Sep/2021 07:25:33] "[33mGET / HTTP/1.1[0m" 404 -
+34.79.107.251 - - [30/Sep/2021 07:25:43] "[33mGET / HTTP/1.1[0m" 404 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+139.59.14.94 - - [30/Sep/2021 20:25:23] "[33mHEAD / HTTP/1.0[0m" 404 -
+139.59.14.94 - - [30/Sep/2021 20:25:26] "[33mGET /system_api.php HTTP/1.1[0m" 404 -
+139.59.14.94 - - [30/Sep/2021 20:25:27] "[33mGET /c/version.js HTTP/1.1[0m" 404 -
+139.59.14.94 - - [30/Sep/2021 20:25:30] "[33mGET /streaming/clients_live.php HTTP/1.1[0m" 404 -
+139.59.14.94 - - [30/Sep/2021 20:25:32] "[33mGET /stalker_portal/c/version.js HTTP/1.1[0m" 404 -
+139.59.14.94 - - [30/Sep/2021 20:25:34] "[33mGET /stream/live.php HTTP/1.1[0m" 404 -
+139.59.14.94 - - [30/Sep/2021 20:25:36] "[33mGET /flu/403.html HTTP/1.1[0m" 404 -
+199.195.251.182 - - [01/Oct/2021 05:34:13] "[33mGET / HTTP/1.1[0m" 404 -
+89.248.165.13 - - [02/Oct/2021 06:22:06] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.165.13 - - [02/Oct/2021 06:22:06] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.23 - - [02/Oct/2021 08:56:41] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+89.248.165.23 - - [02/Oct/2021 08:56:41] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+80.82.65.202 - - [02/Oct/2021 13:47:38] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+80.82.65.202 - - [02/Oct/2021 13:47:38] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.52 - - [02/Oct/2021 15:06:31] code 400, message Bad request syntax ('\x04\x01\x00\x19h/8!\x00')
+89.248.165.52 - - [02/Oct/2021 15:06:31] "[35m[1m h/8! [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.52 - - [02/Oct/2021 15:07:31] code 400, message Bad request syntax ('\x05\x01\x00')
+89.248.165.52 - - [02/Oct/2021 15:07:31] "[35m[1m [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.52 - - [02/Oct/2021 15:07:31] "[33mCONNECT hotmail-com.olc.protection.outlook.com:25 HTTP/1.1[0m" 404 -
+89.248.165.52 - - [02/Oct/2021 15:49:07] code 400, message Bad HTTP/0.9 request type ('\x04\x01\x00PUÎ')
+89.248.165.52 - - [02/Oct/2021 15:49:07] "[35m[1m PUÎ s [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.52 - - [02/Oct/2021 15:50:07] code 400, message Bad request syntax ('\x05\x01\x00')
+89.248.165.52 - - [02/Oct/2021 15:50:07] "[35m[1m [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.52 - - [02/Oct/2021 15:50:08] "[33mCONNECT 85.206.160.115:80 HTTP/1.1[0m" 404 -
+193.37.255.114 - - [02/Oct/2021 16:12:28] "[33mGET / HTTP/1.1[0m" 404 -
+193.37.255.114 - - [02/Oct/2021 16:12:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+193.37.255.114 - - [02/Oct/2021 16:12:36] code 400, message Bad request syntax ('\x03]\x06Xa\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+193.37.255.114 - - [02/Oct/2021 16:12:36] "[35m[1m]Xa                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [0m" HTTPStatus.BAD_REQUEST -
+34.79.107.251 - - [02/Oct/2021 16:12:36] "[33mGET / HTTP/1.1[0m" 404 -
+80.82.70.168 - - [02/Oct/2021 22:51:39] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+80.82.70.168 - - [02/Oct/2021 22:51:39] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.23 - - [03/Oct/2021 01:11:40] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+89.248.165.23 - - [03/Oct/2021 01:11:40] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+199.249.230.170 - - [04/Oct/2021 02:05:19] "[33mGET / HTTP/1.1[0m" 404 -
+106.245.140.119 - - [04/Oct/2021 13:15:17] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x03\x00\x00\x00')
+106.245.140.119 - - [04/Oct/2021 13:15:17] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/SourceCodePreviousVer_ScikitLearn_TensorFlow_etc/dataset_treatment/poma_updrs_scaling.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/SourceCodePreviousVer_ScikitLearn_TensorFlow_etc/scikitlearn/saved_model_test_prediction/2class_model/saved_model_AdaBoost_2class_210622.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/SourceCodePreviousVer_ScikitLearn_TensorFlow_etc/scikitlearn/support_vector_machine/poma_RobustScaler_NuSVC_3class_210518.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/SourceCodePreviousVer_ScikitLearn_TensorFlow_etc/tensorflow/multi_layer_perceptron/poma_MultiLayerPerceptron_Robust_3class_210504.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/pip/_vendor/html5lib/treeadapters/__init__.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/venv/lib/python3.6/site-packages/setuptools/dist.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+45.9.20.74 - - [05/Oct/2021 22:23:40] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00É·\x00\x00')
+45.9.20.74 - - [05/Oct/2021 22:23:40] "[35m[1m 4           ( ÿ U   MSSQLServer É·  [0m" HTTPStatus.BAD_REQUEST -
+89.248.165.24 - - [06/Oct/2021 03:02:44] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+89.248.165.24 - - [06/Oct/2021 03:02:44] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_h5_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_pb_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_pb_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_pb_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_pb_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_pb_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_pb_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_pb_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_pb_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_pb_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_pb_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_keras_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_estimator_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_estimator_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_estimator_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_pb_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_estimator_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_pb_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_estimator_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_estimator_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_estimator_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_estimator_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_estimator_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_estimator_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_estimator_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+89.248.165.24 - - [06/Oct/2021 16:23:03] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+89.248.165.24 - - [06/Oct/2021 16:23:03] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_estimator_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_estimator_ver_tflite_inference.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsGBT/updrs_GBT.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT_convert_pb_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsGBT/updrs_GBT_convert_pb_to_tflite.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaGBT/poma_GBT.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+94.102.49.193 - - [06/Oct/2021 18:31:01] "[33mGET / HTTP/1.1[0m" 404 -
+94.102.49.193 - - [06/Oct/2021 18:31:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+94.102.49.193 - - [06/Oct/2021 18:31:06] code 400, message Bad request syntax ('\x03Öl]a\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+94.102.49.193 - - [06/Oct/2021 18:31:06] "[35m[1mÖl]a                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [0m" HTTPStatus.BAD_REQUEST -
+34.79.68.246 - - [06/Oct/2021 18:31:39] "[33mGET / HTTP/1.1[0m" 404 -
+185.217.1.122 - - [07/Oct/2021 04:04:29] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+185.217.1.122 - - [07/Oct/2021 04:04:29] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+185.220.100.242 - - [07/Oct/2021 06:47:03] code 400, message Bad request syntax ('\x00\x00\x00nþSMB@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00$\x00\x04\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x10\x02\x00\x03\x02\x03\x11\x03')
+185.220.100.242 - - [07/Oct/2021 06:47:03] "[35m[1m   nþSMB@                                                           $                                  [0m" HTTPStatus.BAD_REQUEST -
+23.129.64.143 - - [07/Oct/2021 06:47:08] code 400, message Bad HTTP/0.9 request type ('\x12\x01\x00\x1a\x00\x00\x00\x00\x00\x00')
+23.129.64.143 - - [07/Oct/2021 06:47:08] "[35m[1m          ÿ U  [0m" HTTPStatus.BAD_REQUEST -
+23.129.64.143 - - [07/Oct/2021 06:47:10] "[33mGET / HTTP/1.1[0m" 404 -
+71.6.167.142 - - [07/Oct/2021 09:28:50] "[33mGET / HTTP/1.1[0m" 404 -
+71.6.167.142 - - [07/Oct/2021 09:28:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+34.79.107.251 - - [07/Oct/2021 09:28:59] "[33mGET / HTTP/1.1[0m" 404 -
+71.6.167.142 - - [07/Oct/2021 09:29:11] code 400, message Bad request syntax ('\x03C?^a\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+71.6.167.142 - - [07/Oct/2021 09:29:11] "[35m[1mC?^a                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [0m" HTTPStatus.BAD_REQUEST -
+147.182.253.231 - - [07/Oct/2021 13:57:00] "[33mHEAD / HTTP/1.0[0m" 404 -
+147.182.253.231 - - [07/Oct/2021 13:57:01] "[33mGET /system_api.php HTTP/1.1[0m" 404 -
+147.182.253.231 - - [07/Oct/2021 13:57:01] "[33mGET /c/version.js HTTP/1.1[0m" 404 -
+147.182.253.231 - - [07/Oct/2021 13:57:02] "[33mGET /streaming/clients_live.php HTTP/1.1[0m" 404 -
+147.182.253.231 - - [07/Oct/2021 13:57:03] "[33mGET /stalker_portal/c/version.js HTTP/1.1[0m" 404 -
+147.182.253.231 - - [07/Oct/2021 13:57:03] "[33mGET /stream/live.php HTTP/1.1[0m" 404 -
+147.182.253.231 - - [07/Oct/2021 13:57:04] "[33mGET /flu/403.html HTTP/1.1[0m" 404 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/PomaDNN/poma_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/UpdrsDNN/updrs_DNN.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+94.232.42.204 - - [09/Oct/2021 09:04:44] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+94.232.42.204 - - [09/Oct/2021 09:04:44] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+23.129.64.176 - - [10/Oct/2021 10:50:12] code 400, message Bad HTTP/0.9 request type ('\x12\x01\x00\x1a\x00\x00\x00\x00\x00\x00')
+23.129.64.176 - - [10/Oct/2021 10:50:12] "[35m[1m          ÿ U  [0m" HTTPStatus.BAD_REQUEST -
+23.129.64.176 - - [10/Oct/2021 10:50:14] code 400, message Bad HTTP/0.9 request type ("\x03\x00\x00,'à\x00\x00\x00\x00\x00Cookie:")
+23.129.64.176 - - [10/Oct/2021 10:50:14] "[35m[1m  ,'à     Cookie: mstshash=eltons[0m" HTTPStatus.BAD_REQUEST -
+107.189.14.47 - - [10/Oct/2021 10:50:20] code 400, message Bad request syntax ('\x00\x00\x00nþSMB@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00$\x00\x04\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x10\x02\x00\x03\x02\x03\x11\x03')
+107.189.14.47 - - [10/Oct/2021 10:50:20] "[35m[1m   nþSMB@                                                           $                                  [0m" HTTPStatus.BAD_REQUEST -
+107.189.14.47 - - [10/Oct/2021 10:50:23] "[33mGET / HTTP/1.1[0m" 404 -
+71.6.146.185 - - [11/Oct/2021 04:44:09] "[33mGET / HTTP/1.1[0m" 404 -
+71.6.146.185 - - [11/Oct/2021 04:44:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+71.6.146.185 - - [11/Oct/2021 04:44:44] code 400, message Bad request syntax ('\x03\x8aBca\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+71.6.146.185 - - [11/Oct/2021 04:44:44] "[35m[1mBca                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [0m" HTTPStatus.BAD_REQUEST -
+34.140.248.32 - - [11/Oct/2021 04:46:22] "[33mGET / HTTP/1.1[0m" 404 -
+167.71.136.216 - - [11/Oct/2021 09:02:44] "[33mHEAD / HTTP/1.0[0m" 404 -
+167.71.136.216 - - [11/Oct/2021 09:02:46] "[33mGET /system_api.php HTTP/1.1[0m" 404 -
+167.71.136.216 - - [11/Oct/2021 09:02:47] "[33mGET /c/version.js HTTP/1.1[0m" 404 -
+167.71.136.216 - - [11/Oct/2021 09:02:49] "[33mGET /streaming/clients_live.php HTTP/1.1[0m" 404 -
+167.71.136.216 - - [11/Oct/2021 09:02:50] "[33mGET /stalker_portal/c/version.js HTTP/1.1[0m" 404 -
+167.71.136.216 - - [11/Oct/2021 09:02:51] "[33mGET /stream/live.php HTTP/1.1[0m" 404 -
+167.71.136.216 - - [11/Oct/2021 09:02:52] "[33mGET /flu/403.html HTTP/1.1[0m" 404 -
+167.71.136.216 - - [11/Oct/2021 09:02:53] "[33mGET /gemini-iptv/vod.json HTTP/1.1[0m" 404 -
+167.71.136.216 - - [11/Oct/2021 09:02:53] "[33mGET /gemini-iptv/get_prc.php HTTP/1.1[0m" 404 -
+137.184.144.177 - - [12/Oct/2021 03:43:37] "[33mGET / HTTP/1.0[0m" 404 -
+78.128.112.14 - - [12/Oct/2021 04:21:55] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+78.128.112.14 - - [12/Oct/2021 04:21:55] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+45.129.56.200 - - [13/Oct/2021 11:56:09] "[33mGET / HTTP/1.1[0m" 404 -
+89.248.165.93 - - [13/Oct/2021 23:24:01] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.165.93 - - [13/Oct/2021 23:24:01] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+162.142.125.194 - - [14/Oct/2021 03:07:45] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Æsq\x86Ç\x841[x20Y²M\x8eÊÝì\x8e»\x03\x7f\x9f§tLë>\x9d©í'\x00\x00\x1aÀ/À+À\x11À\x07À\x13À")
+162.142.125.194 - - [14/Oct/2021 03:07:45] "[35m[1m {  wÆsqÇ1[x20Y²MÊÝì»§tLë>©í'  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+162.142.125.194 - - [14/Oct/2021 03:07:46] "[33mGET / HTTP/1.1[0m" 404 -
+162.142.125.194 - - [14/Oct/2021 03:07:47] "[33mGET / HTTP/1.1[0m" 404 -
+218.154.17.135 - - [14/Oct/2021 16:13:47] "[33mGET / HTTP/1.1[0m" 404 -
+218.154.17.135 - - [14/Oct/2021 16:13:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+218.154.17.135 - - [14/Oct/2021 16:14:51] code 400, message Bad request syntax ('ÿôÿý\x06ÿôÿý\x06ÿôÿý\x06ÿôÿý\x06ÿôÿý\x06ÿôÿý\x06')
+218.154.17.135 - - [14/Oct/2021 16:14:51] "[35m[1mÿôÿýÿôÿýÿôÿýÿôÿýÿôÿýÿôÿý[0m" HTTPStatus.BAD_REQUEST -
+218.154.17.135 - - [14/Oct/2021 16:15:15] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03t!~ÄE3Ös\x0fµÓ\x05\x1d\x83\x97²ü2\x04\x9b«®¶G\x9d\x18ã\x05è®5~ \x06Æ2'~{\x1e\x0e\x95%\x85sô;ºÇ\x99qD#A\x8faÝY-eàEÀ·ä\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93jj\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+218.154.17.135 - - [14/Oct/2021 16:15:15] "[35m[1m  üt!~ÄE3ÖsµÓ²ü2«®¶Gãè®5~ Æ2'~{%sô;ºÇqD#AaÝY-eàEÀ·ä  À+À/À,À0Ì©Ì¨ÀÀ   / 5 jj     ÿ   [0m" HTTPStatus.BAD_REQUEST -
+218.154.17.135 - - [14/Oct/2021 16:15:15] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03EÞº§»{Ù<\xadë%\tO\x9bj\x02\\K;\x16$óÕ½n{±\x97\x15¦lõ Õ\x03º\x1f{` K_U\x1a_cÜéñ¸jý\x9fO«^)³¦\x81hÔ_px\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93::\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+218.154.17.135 - - [14/Oct/2021 16:15:15] "[35m[1m  üEÞº§»{Ù<­ë%	Oj\K;$óÕ½n{±¦lõ Õº{` K_U_cÜéñ¸jýO«^)³¦hÔ_px  zzÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 ::     ÿ   [0m" HTTPStatus.BAD_REQUEST -
+218.154.17.135 - - [14/Oct/2021 16:15:15] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03<j\x13ñ\x1cæ\x8b4àÆºY9\x05\x98d\x17\x85.Í[\x17»nñ#N£tä\x90( .$UV\x80J$\x8c}ª\x85ºå\x01öY³\x14u\x7f0]LdÑ«\x83wÝ\x08\x12\x9b\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93**\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+218.154.17.135 - - [14/Oct/2021 16:15:15] "[35m[1m  ü<jñæ4àÆºY9d.Í[»nñ#N£tä( .$UVJ$}ªºåöY³u0]LdÑ«wÝ  jjÀ+À/À,À0Ì©Ì¨ÀÀ   / 5 **     ÿ   [0m" HTTPStatus.BAD_REQUEST -
+218.154.17.135 - - [14/Oct/2021 16:15:15] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03eÍt\x1c\xa0^\xa0Çßñ¼zCH\x03@\x92Í\x81\x1bá9\x86ÿ\x0e\x14\x9a3B\x03M´ '4é\t¬`+")
+218.154.17.135 - - [14/Oct/2021 16:15:15] "[35m[1m  üeÍt ^ Çßñ¼zCH@Íá9ÿ3BM´ '4é	¬`+[0m" HTTPStatus.BAD_REQUEST -
+167.71.220.102 - - [15/Oct/2021 01:28:52] "[33mHEAD / HTTP/1.0[0m" 404 -
+167.71.220.102 - - [15/Oct/2021 01:28:55] "[33mGET /system_api.php HTTP/1.1[0m" 404 -
+167.71.220.102 - - [15/Oct/2021 01:28:55] "[33mGET /c/version.js HTTP/1.1[0m" 404 -
+167.71.220.102 - - [15/Oct/2021 01:28:55] "[33mGET /streaming/clients_live.php HTTP/1.1[0m" 404 -
+167.71.220.102 - - [15/Oct/2021 01:28:56] "[33mGET /stalker_portal/c/version.js HTTP/1.1[0m" 404 -
+167.71.220.102 - - [15/Oct/2021 01:28:56] "[33mGET /stream/live.php HTTP/1.1[0m" 404 -
+167.71.220.102 - - [15/Oct/2021 01:28:56] "[33mGET /flu/403.html HTTP/1.1[0m" 404 -
+194.26.29.147 - - [15/Oct/2021 02:39:50] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+194.26.29.147 - - [15/Oct/2021 02:39:50] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+194.26.29.147 - - [15/Oct/2021 02:39:51] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+194.26.29.147 - - [15/Oct/2021 02:39:51] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+89.248.165.252 - - [15/Oct/2021 04:46:06] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.165.252 - - [15/Oct/2021 04:46:06] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+194.26.29.147 - - [15/Oct/2021 23:02:23] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+194.26.29.147 - - [15/Oct/2021 23:02:23] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+194.26.29.147 - - [15/Oct/2021 23:02:23] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+194.26.29.147 - - [15/Oct/2021 23:02:23] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+23.129.64.166 - - [16/Oct/2021 00:20:37] code 400, message Bad request syntax ('\x00\x00\x00nþSMB@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00$\x00\x04\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x10\x02\x00\x03\x02\x03\x11\x03')
+23.129.64.166 - - [16/Oct/2021 00:20:37] "[35m[1m   nþSMB@                                                           $                                  [0m" HTTPStatus.BAD_REQUEST -
+23.129.64.166 - - [16/Oct/2021 00:20:40] "[33mGET / HTTP/1.1[0m" 404 -
+167.248.133.57 - - [16/Oct/2021 18:38:46] "[33mGET / HTTP/1.1[0m" 404 -
+71.6.199.23 - - [17/Oct/2021 02:22:39] "[33mGET / HTTP/1.1[0m" 404 -
+71.6.199.23 - - [17/Oct/2021 02:22:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+71.6.199.23 - - [17/Oct/2021 02:22:40] code 400, message Bad request syntax ('\x03`')
+71.6.199.23 - - [17/Oct/2021 02:22:40] "[35m[1m`[0m" HTTPStatus.BAD_REQUEST -
+34.140.248.32 - - [17/Oct/2021 02:25:37] "[33mGET / HTTP/1.1[0m" 404 -
+94.232.42.204 - - [17/Oct/2021 12:56:16] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+94.232.42.204 - - [17/Oct/2021 12:56:16] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+137.184.131.138 - - [18/Oct/2021 01:08:31] "[33mGET / HTTP/1.0[0m" 404 -
+167.94.138.44 - - [18/Oct/2021 07:35:42] "[33mGET / HTTP/1.1[0m" 404 -
+199.249.230.119 - - [18/Oct/2021 18:43:24] code 400, message Bad request syntax ('\x00\x00\x00nþSMB@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00$\x00\x04\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x02\x10\x02\x00\x03\x02\x03\x11\x03')
+199.249.230.119 - - [18/Oct/2021 18:43:24] "[35m[1m   nþSMB@                                                           $                                  [0m" HTTPStatus.BAD_REQUEST -
+171.25.193.78 - - [18/Oct/2021 18:43:27] "[33mGET / HTTP/1.1[0m" 404 -
+122.224.132.234 - - [19/Oct/2021 02:34:17] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x03\x00\x00\x00')
+122.224.132.234 - - [19/Oct/2021 02:34:17] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+167.248.133.116 - - [20/Oct/2021 00:35:40] code 400, message Bad request version ('À\x14À')
+167.248.133.116 - - [20/Oct/2021 00:35:40] "[35m[1m {  wù;êC÷_N²ÂaZÚèó·Øúh<Vje~-]¯  À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+167.248.133.116 - - [20/Oct/2021 00:35:41] "[33mGET / HTTP/1.1[0m" 404 -
+167.248.133.116 - - [20/Oct/2021 00:35:41] "[33mGET / HTTP/1.1[0m" 404 -
+89.248.172.20 - - [20/Oct/2021 12:13:41] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.172.20 - - [20/Oct/2021 12:13:41] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+23.129.64.189 - - [21/Oct/2021 07:23:30] "[33mGET / HTTP/1.1[0m" 404 -
+143.198.219.155 - - [21/Oct/2021 15:06:35] "[33mHEAD / HTTP/1.0[0m" 404 -
+143.198.219.155 - - [21/Oct/2021 15:06:36] "[33mGET /system_api.php HTTP/1.1[0m" 404 -
+143.198.219.155 - - [21/Oct/2021 15:06:36] "[33mGET /c/version.js HTTP/1.1[0m" 404 -
+143.198.219.155 - - [21/Oct/2021 15:06:37] "[33mGET /streaming/clients_live.php HTTP/1.1[0m" 404 -
+143.198.219.155 - - [21/Oct/2021 15:06:38] "[33mGET /stalker_portal/c/version.js HTTP/1.1[0m" 404 -
+143.198.219.155 - - [21/Oct/2021 15:06:39] "[33mGET /stream/live.php HTTP/1.1[0m" 404 -
+143.198.219.155 - - [21/Oct/2021 15:06:40] "[33mGET /flu/403.html HTTP/1.1[0m" 404 -
+89.248.172.20 - - [21/Oct/2021 23:05:17] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.172.20 - - [21/Oct/2021 23:05:17] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+162.142.125.196 - - [22/Oct/2021 15:31:52] "[33mGET / HTTP/1.1[0m" 404 -
+89.248.165.89 - - [23/Oct/2021 04:10:44] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+89.248.165.89 - - [23/Oct/2021 04:10:44] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+94.102.51.31 - - [24/Oct/2021 06:59:14] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+94.102.51.31 - - [24/Oct/2021 06:59:14] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+167.248.133.43 - - [24/Oct/2021 07:00:17] "[33mGET / HTTP/1.1[0m" 404 -
+167.94.138.58 - - [24/Oct/2021 08:42:28] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03fw×\x91\x06Ñ"§)\x8a>Õ\x12Ì0Éól4\x1e\x0ez\x0c%µá@@Dñ\x00\x8c\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+167.94.138.58 - - [24/Oct/2021 08:42:28] "[35m[1m {  wfw×Ñ"§)>ÕÌ0Éól4z%µá@@Dñ   À/À+ÀÀÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+167.94.138.58 - - [24/Oct/2021 08:42:30] "[33mGET / HTTP/1.1[0m" 404 -
+167.94.138.58 - - [24/Oct/2021 08:42:30] "[33mGET / HTTP/1.1[0m" 404 -
+185.220.101.57 - - [24/Oct/2021 10:37:52] code 400, message Bad HTTP/0.9 request type ('\x12\x01\x00\x1a\x00\x00\x00\x00\x00\x00')
+185.220.101.57 - - [24/Oct/2021 10:37:52] "[35m[1m          ÿ U  [0m" HTTPStatus.BAD_REQUEST -
+199.249.230.163 - - [24/Oct/2021 10:37:58] "[33mGET / HTTP/1.1[0m" 404 -
+178.128.231.180 - - [24/Oct/2021 16:12:34] "[33mGET / HTTP/1.0[0m" 404 -
+94.102.51.31 - - [24/Oct/2021 17:52:55] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+94.102.51.31 - - [24/Oct/2021 17:52:55] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+94.102.51.31 - - [24/Oct/2021 20:13:23] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+94.102.51.31 - - [24/Oct/2021 20:13:23] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+94.232.42.204 - - [26/Oct/2021 01:50:30] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+94.232.42.204 - - [26/Oct/2021 01:50:30] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+162.142.125.196 - - [26/Oct/2021 05:45:06] "[33mGET / HTTP/1.1[0m" 404 -
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run_test.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/config.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run__test_main.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+ * Detected change in '/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/file_list_check_and_run.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 576-944-678
+192.168.0.1 - - [26/Oct/2021 10:32:39] "POST /file-upload HTTP/1.1" 200 -
+137.184.160.73 - - [26/Oct/2021 13:30:11] "[33mHEAD / HTTP/1.0[0m" 404 -
+137.184.160.73 - - [26/Oct/2021 13:30:11] "[33mGET /system_api.php HTTP/1.1[0m" 404 -
+137.184.160.73 - - [26/Oct/2021 13:30:12] "[33mGET /c/version.js HTTP/1.1[0m" 404 -
+137.184.160.73 - - [26/Oct/2021 13:30:13] "[33mGET /streaming/clients_live.php HTTP/1.1[0m" 404 -
+137.184.160.73 - - [26/Oct/2021 13:30:14] "[33mGET /stalker_portal/c/version.js HTTP/1.1[0m" 404 -
+137.184.160.73 - - [26/Oct/2021 13:30:14] "[33mGET /stream/live.php HTTP/1.1[0m" 404 -
+137.184.160.73 - - [26/Oct/2021 13:30:15] "[33mGET /flu/403.html HTTP/1.1[0m" 404 -
+137.184.160.73 - - [26/Oct/2021 13:30:16] "[33mGET /gemini-iptv/vod.json HTTP/1.1[0m" 404 -
+137.184.160.73 - - [26/Oct/2021 13:30:16] "[33mGET /gemini-iptv/get_prc.php HTTP/1.1[0m" 404 -
+137.184.160.73 - - [26/Oct/2021 13:30:17] "[33mGET / HTTP/1.1[0m" 404 -
+80.82.70.168 - - [27/Oct/2021 02:09:28] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+80.82.70.168 - - [27/Oct/2021 02:09:28] "[35m[1m  à          [0m" HTTPStatus.BAD_REQUEST -
+185.56.80.65 - - [27/Oct/2021 08:43:00] "[33mGET / HTTP/1.1[0m" 404 -
+193.142.146.216 - - [27/Oct/2021 10:33:56] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&à\x00\x00\x00\x00\x00Cookie:')
+193.142.146.216 - - [27/Oct/2021 10:33:56] "[35m[1m  +&à     Cookie: mstshash=hello[0m" HTTPStatus.BAD_REQUEST -
+162.142.125.41 - - [27/Oct/2021 21:05:16] "[33mGET / HTTP/1.1[0m" 404 -
+167.94.138.41 - - [28/Oct/2021 22:12:50] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ÎÂDü.Üsq(')
+167.94.138.41 - - [28/Oct/2021 22:12:50] "[35m[1m {  wÎÂDü.Üsq(s³*I¥V$[0m" HTTPStatus.BAD_REQUEST -
+167.94.138.41 - - [28/Oct/2021 22:12:52] "[33mGET / HTTP/1.1[0m" 404 -
+167.94.138.41 - - [28/Oct/2021 22:12:53] "[33mGET / HTTP/1.1[0m" 404 -
+64.225.7.110 - - [29/Oct/2021 01:32:52] "[33mHEAD / HTTP/1.0[0m" 404 -
+64.225.7.110 - - [29/Oct/2021 01:32:54] "[33mGET /system_api.php HTTP/1.1[0m" 404 -
+64.225.7.110 - - [29/Oct/2021 01:32:56] "[33mGET /c/version.js HTTP/1.1[0m" 404 -
+64.225.7.110 - - [29/Oct/2021 01:32:58] "[33mGET /streaming/clients_live.php HTTP/1.1[0m" 404 -
+64.225.7.110 - - [29/Oct/2021 01:32:59] "[33mGET /stalker_portal/c/version.js HTTP/1.1[0m" 404 -
+64.225.7.110 - - [29/Oct/2021 01:33:01] "[33mGET /stream/live.php HTTP/1.1[0m" 404 -
+64.225.7.110 - - [29/Oct/2021 01:33:03] "[33mGET /flu/403.html HTTP/1.1[0m" 404 -
+106.75.154.53 - - [29/Oct/2021 06:52:19] code 400, message Bad request syntax ('{\x01\x00\x1613911111112À¨\x01\x01\x13\x90{')
+106.75.154.53 - - [29/Oct/2021 06:52:19] "[35m[1m{ 13911111112À¨{[0m" HTTPStatus.BAD_REQUEST -
+106.75.154.53 - - [29/Oct/2021 06:52:19] "[33mGET / HTTP/1.0[0m" 404 -
+106.75.134.236 - - [29/Oct/2021 07:40:19] "[33mGET / HTTP/1.1[0m" 404 -
+23.129.64.183 - - [30/Oct/2021 17:24:43] "[33mGET / HTTP/1.1[0m" 404 -
+167.248.133.114 - - [01/Nov/2021 08:59:02] "[33mGET / HTTP/1.1[0m" 404 -
+159.223.14.103 - - [01/Nov/2021 13:45:59] "[33mGET / HTTP/1.0[0m" 404 -
+23.129.64.147 - - [02/Nov/2021 12:04:45] "[33mGET / HTTP/1.1[0m" 404 -

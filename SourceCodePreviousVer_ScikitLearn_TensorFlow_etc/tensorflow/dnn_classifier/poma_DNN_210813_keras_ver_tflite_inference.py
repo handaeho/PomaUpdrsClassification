@@ -162,7 +162,7 @@ if __name__ == '__main__':
     # print(updrs_x[:10])
     # print(updrs_y[:10])
 
-    poma_model_path = 'TEST_KERAS_TELITE_FILE_210817_00000000000000000000000000000000001.tflite'
+    poma_model_path = '/home/aiteam/daeho/PomaUpdrs/SourceCodePreviousVer_ScikitLearn_TensorFlow_etc/tensorflow/dnn_classifier/POMA_TEST_KERAS_TELITE_FILE_211112_00001.tflite'
     # updrs_model_path = '../tensorflow/dnn_classifier/TEST_TELITE_FILE_000000000005.tflite'
 
     poma_acc = tf_lite_inference(poma_model_path, poma_x, poma_y)

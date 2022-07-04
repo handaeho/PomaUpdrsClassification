@@ -2,7 +2,7 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Remote Python 3.6.13 (sftp://aiteam@106.240.123.212:4885/root/.conda/envs/daeho/bin/python3.6)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Remote Python 3.8.11 (sftp://root@192.168.0.173:22/home/aiteam/.conda/envs/daehoPython38/bin/python3.8)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

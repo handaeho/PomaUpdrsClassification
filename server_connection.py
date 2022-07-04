@@ -1,4 +1,4 @@
-#!/root/.conda/envs/daeho/bin/python3.6
+#!/home/aiteam/.conda/envs/daehoPython38/bin/python3.8
 # -*- coding: utf-8 -*-
 
 import os

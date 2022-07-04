@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="aiteam@106.240.123.212:4885 password" remoteFilesAllowedToDisappearOnAutoupload="false" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" serverName="root@192.168.0.173:22" remoteFilesAllowedToDisappearOnAutoupload="false" autoUploadExternalChanges="true">
     <serverData>
-      <paths name="aiteam">
+      <paths name="root@192.168.0.173:22">
         <serverdata>
           <mappings>
             <mapping deploy="/home/aiteam/daeho/PomaUpdrs" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="aiteam@106.240.123.212:4885 password">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/home/aiteam/daeho/PomaUpdrs" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>

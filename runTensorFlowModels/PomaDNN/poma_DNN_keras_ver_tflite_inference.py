@@ -85,5 +85,6 @@ class PomaDNNInferenceTfLiteModel:
 
         end = time.time()
         print('@@@@@@@@@@@@@@@ Model running time elapsed:', end - start)
+        print(accuracy)
 
         return accuracy

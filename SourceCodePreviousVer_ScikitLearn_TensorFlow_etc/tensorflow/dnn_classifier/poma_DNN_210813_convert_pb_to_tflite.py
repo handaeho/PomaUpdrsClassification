@@ -8,14 +8,14 @@ print(os.path.realpath(__file__))
 # 현재 파일 절대 경로
 print(os.path.abspath(__file__))
 ####################################################################################################################
-path = "poma_DNN_TEST_h5_to_pb_210813_00000000000000000000000000000001"
-
-saved_model_obj = tf.saved_model.load(path)
-print(saved_model_obj.signatures)
-# _SignatureMap({'serving_default': <ConcreteFunction signature_wrapper(*, dense_input) at 0x7F5DEE3580B8>})
+# path = "/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/checkpoint-epoch-1000-batch-64-trial-001.h5"
+#
+# saved_model_obj = tf.saved_model.load(path)
+# print(saved_model_obj.signatures)
+# # _SignatureMap({'serving_default': <ConcreteFunction signature_wrapper(*, dense_input) at 0x7F5DEE3580B8>})
 
 # Saved model load.
-model = load_model('poma_dnn_keras_ver_210813_00000000000000000000000000000001.h5')
+model = load_model('/home/aiteam/daeho/PomaUpdrs/runTensorFlowModels/run/checkpoint-epoch-1000-batch-64-trial-001.h5')
 
 # Convert the model
 converter = tf.lite.TFLiteConverter.from_keras_model(model)
@@ -32,11 +32,11 @@ converter.optimizations = [tf.lite.Optimize.DEFAULT]
 tflite_model = converter.convert()
 
 # Save the model.
-open("POMA_TEST_KERAS_TELITE_FILE_210817_00000000000000000000000000000000002.tflite", "wb").write(tflite_model)
+open("POMA_TEST_KERAS_TELITE_FILE_211112_00001.tflite", "wb").write(tflite_model)
 
 # tensorflow.lite의 get_tensor_details 함수를 이용해서 모델 정보를 확인
 interpreter = tf.lite.Interpreter(
-    model_path="POMA_TEST_KERAS_TELITE_FILE_210817_00000000000000000000000000000000002.tflite")
+    model_path="POMA_TEST_KERAS_TELITE_FILE_211112_00001.tflite")
 
 for item in interpreter.get_tensor_details():
     for key in item.keys():

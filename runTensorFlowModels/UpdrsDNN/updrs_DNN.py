@@ -1,5 +1,9 @@
 import datetime
+
+import numpy as np
 import tensorflow as tf
+from keras.callbacks import EarlyStopping, ModelCheckpoint
+from sklearn.metrics import confusion_matrix, classification_report
 
 from tensorflow.keras import Sequential
 from tensorflow.keras.layers import Dense
@@ -59,7 +63,7 @@ class MakeUpdrsDnnModel:
         y_eval_encoding = to_categorical(labels_eval, 3)
         y_test_encoding = to_categorical(labels_test, 3)
 
-        return x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, y_test_encoding
+        return x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, y_test_encoding, labels_test
 
     ##############################################################################################################
 
@@ -88,7 +92,7 @@ class MakeUpdrsDnnModel:
 
     ##############################################################################################################
 
-    def model_train_test_save(self, x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, y_test_encoding):
+    def model_train_test_save(self, x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, y_test_encoding, labels_test):
         """
         Model train and save as H5.
 
@@ -98,6 +102,7 @@ class MakeUpdrsDnnModel:
         :param y_train_encoding: encoded train dataset's labels
         :param y_eval_encoding: encoded evaluation dataset's labels
         :param y_test_encoding: encoded test dataset's labels
+        :param labels_test: real test dataset's labels
 
         :return: model_name, save_path
         """
@@ -105,13 +110,45 @@ class MakeUpdrsDnnModel:
 
         model.summary()
 
-        callback = tf.keras.callbacks.EarlyStopping(monitor='loss', patience=5)
+        date_time = str(datetime.datetime.now().strftime("%Y%m%d_%H%M%S"))
+
+        saved_check_point_model_path = '/home/aiteam/daeho/PomaUpdrs/checkpoint_models/DNN_checkpoint_model/updrs_DNN_checkpoint_Model/'
+
+        file_name = saved_check_point_model_path + f'updrs_dnn_check_point_model_{date_time}.h5'
+
+        # model training metric에서 더 이상 개선이 없다면, training 종료. (patience = n, n번 이상 개선이 없다면 종료)
+        early_stopping = EarlyStopping(monitor='val_loss', patience=5)
+
+        # model training 과정 중, 체크 포인트 설정. train 내용을 일정 간격으로 저장하고 추후 다시 load하여 계속 학습 가능.
+        model_checkpoint = ModelCheckpoint(file_name, monitor='val_loss', period=100, verbose=1,
+                                           save_weights_only=False, save_best_only=True, mode='auto')
+
+        # 모델 개선이 없는 경우, learning rate를 조정해 개선을 유도.
+        reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.1, patience=5, verbose=1,
+                                                         mode='auto', min_delta=0.0001, cooldown=0, min_lr=0)
 
         model.fit(x_train_scaled, y_train_encoding,
-                  validation_data=[[x_eval_scaled, y_eval_encoding]],
-                  epochs=1000, verbose=0, validation_split=0.2, callbacks=[callback])
+                  validation_data=(x_eval_scaled, y_eval_encoding),
+                  epochs=1000, verbose=0, validation_split=0.2,
+                  callbacks=[early_stopping, model_checkpoint, reduce_lr])
 
-        model.evaluate(x_test_scaled, y_test_encoding, batch_size=64)
+        model.evaluate(x_test_scaled, y_test_encoding)
+
+        # returns an array of probability per classes
+        pred = model.predict(x_test_scaled, batch_size=128)
+        # print(pred)
+
+        # position of max probability
+        predictions = []
+        for i in pred:
+            predictions.append(np.argmax(i))
+
+        # print(y_test)
+        # print(predictions)
+
+        print('------------------ Test DNN Confusion-Matrix / Classification-Report ------------------------')
+        print(confusion_matrix(labels_test, predictions))
+        print(classification_report(labels_test, predictions, target_names=['class 0', 'class 1', 'class 2']))
 
         try:
             # Save the entire model to a HDF5 file.

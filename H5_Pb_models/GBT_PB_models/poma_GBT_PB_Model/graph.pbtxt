@@ -205,7 +205,7 @@ node {
     key: "else_branch"
     value {
       func {
-        name: "global_step_cond_false_15"
+        name: "global_step_cond_false_3032923"
       }
     }
   }
@@ -222,7 +222,7 @@ node {
     key: "then_branch"
     value {
       func {
-        name: "global_step_cond_true_14"
+        name: "global_step_cond_true_3032922"
       }
     }
   }
@@ -13059,7 +13059,7 @@ node {
     key: "else_branch"
     value {
       func {
-        name: "head_assert_range_assert_less_equal_Assert_AssertGuard_false_743"
+        name: "head_assert_range_assert_less_equal_Assert_AssertGuard_false_3033651"
       }
     }
   }
@@ -13076,7 +13076,7 @@ node {
     key: "then_branch"
     value {
       func {
-        name: "head_assert_range_assert_less_equal_Assert_AssertGuard_true_742"
+        name: "head_assert_range_assert_less_equal_Assert_AssertGuard_true_3033650"
       }
     }
   }
@@ -13366,7 +13366,7 @@ node {
     key: "else_branch"
     value {
       func {
-        name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_false_768"
+        name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_false_3033676"
       }
     }
   }
@@ -13383,7 +13383,7 @@ node {
     key: "then_branch"
     value {
       func {
-        name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_true_767"
+        name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_true_3033675"
       }
     }
   }
@@ -16374,7 +16374,7 @@ node {
     key: "else_branch"
     value {
       func {
-        name: "head_cond_false_868"
+        name: "head_cond_false_3033776"
       }
     }
   }
@@ -16391,7 +16391,7 @@ node {
     key: "then_branch"
     value {
       func {
-        name: "head_cond_true_867"
+        name: "head_cond_true_3033775"
       }
     }
   }
@@ -23103,100 +23103,7 @@ node {
 library {
   function {
     signature {
-      name: "UpdateQuantile_wait_until_quaniles_accumulated_false_2523"
-      input_arg {
-        name: "placeholder"
-        type: DT_RESOURCE
-      }
-      input_arg {
-        name: "placeholder_1"
-        type: DT_RESOURCE
-      }
-      input_arg {
-        name: "placeholder_2"
-        type: DT_RESOURCE
-      }
-      input_arg {
-        name: "identity_updatequantile_greaterequal"
-        type: DT_BOOL
-      }
-      output_arg {
-        name: "identity"
-        type: DT_BOOL
-      }
-    }
-    node_def {
-      name: "NoOp"
-      op: "NoOp"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Identity"
-      op: "Identity"
-      input: "identity_updatequantile_greaterequal"
-      input: "^NoOp"
-      attr {
-        key: "T"
-        value {
-          type: DT_BOOL
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-    }
-    ret {
-      key: "identity"
-      value: "Identity:output:0"
-    }
-    attr {
-      key: "_input_shapes"
-      value {
-        list {
-          shape {
-            dim {
-              size: 2
-            }
-          }
-          shape {
-          }
-          shape {
-          }
-          shape {
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 3
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  function {
-    signature {
-      name: "head_cond_false_868"
+      name: "head_cond_false_3033776"
       input_arg {
         name: "placeholder"
         type: DT_FLOAT
@@ -34456,7 +34363,7 @@ library {
         key: "else_branch"
         value {
           func {
-            name: "UpdateQuantile_wait_until_quaniles_accumulated_false_2523"
+            name: "UpdateQuantile_wait_until_quaniles_accumulated_false_3035431"
           }
         }
       }
@@ -34473,7 +34380,7 @@ library {
         key: "then_branch"
         value {
           func {
-            name: "UpdateQuantile_wait_until_quaniles_accumulated_true_2522"
+            name: "UpdateQuantile_wait_until_quaniles_accumulated_true_3035430"
           }
         }
       }
@@ -37784,13 +37691,17 @@ library {
   }
   function {
     signature {
-      name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_false_768"
+      name: "head_assert_range_assert_less_equal_Assert_AssertGuard_false_3033651"
       input_arg {
-        name: "assert_head_assert_range_assert_non_negative_assert_less_equal_all"
+        name: "assert_head_assert_range_assert_less_equal_all"
         type: DT_BOOL
       }
       input_arg {
         name: "assert_head_labels"
+        type: DT_INT64
+      }
+      input_arg {
+        name: "assert_head_assert_range_const"
         type: DT_INT64
       }
       output_arg {
@@ -37824,7 +37735,7 @@ library {
             dtype: DT_STRING
             tensor_shape {
             }
-            string_val: "Labels must >= 0.  "
+            string_val: "Labels must <= n_classes - 1"
           }
         }
       }
@@ -37854,7 +37765,7 @@ library {
             dtype: DT_STRING
             tensor_shape {
             }
-            string_val: "Condition x >= 0 did not hold element-wise:"
+            string_val: "Condition x <= y did not hold element-wise:"
           }
         }
       }
@@ -37890,19 +37801,53 @@ library {
       }
     }
     node_def {
+      name: "Assert/data_4"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_STRING
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_STRING
+            tensor_shape {
+            }
+            string_val: "y (head/assert_range/Const:0) = "
+          }
+        }
+      }
+    }
+    node_def {
       name: "Assert"
       op: "Assert"
-      input: "assert_head_assert_range_assert_non_negative_assert_less_equal_all"
+      input: "assert_head_assert_range_assert_less_equal_all"
       input: "Assert/data_0:output:0"
       input: "Assert/data_1:output:0"
       input: "Assert/data_2:output:0"
       input: "assert_head_labels"
+      input: "Assert/data_4:output:0"
+      input: "assert_head_assert_range_const"
       attr {
         key: "T"
         value {
           list {
             type: DT_STRING
             type: DT_STRING
+            type: DT_STRING
+            type: DT_INT64
             type: DT_STRING
             type: DT_INT64
           }
@@ -37925,7 +37870,7 @@ library {
     node_def {
       name: "Identity"
       op: "Identity"
-      input: "assert_head_assert_range_assert_non_negative_assert_less_equal_all"
+      input: "assert_head_assert_range_assert_less_equal_all"
       input: "^Assert"
       attr {
         key: "T"
@@ -37960,6 +37905,8 @@ library {
             dim {
               size: 1
             }
+          }
+          shape {
           }
         }
       }
@@ -37997,10 +37944,193 @@ library {
         }
       }
     }
+    arg_attr {
+      key: 2
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
   }
   function {
     signature {
-      name: "wait_until_n_batches_accumulated_false_1900"
+      name: "global_step_cond_false_3032923"
+      input_arg {
+        name: "placeholder"
+        type: DT_RESOURCE
+      }
+      input_arg {
+        name: "global_step_initializer_zeros_0"
+        type: DT_INT64
+      }
+      output_arg {
+        name: "global_step_initializer_zeros"
+        type: DT_INT64
+      }
+    }
+    ret {
+      key: "global_step_initializer_zeros"
+      value: "global_step_initializer_zeros_0"
+    }
+    attr {
+      key: "_input_shapes"
+      value {
+        list {
+          shape {
+          }
+          shape {
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 1
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  function {
+    signature {
+      name: "head_assert_range_assert_less_equal_Assert_AssertGuard_true_3033650"
+      input_arg {
+        name: "identity_head_assert_range_assert_less_equal_all"
+        type: DT_BOOL
+      }
+      input_arg {
+        name: "placeholder"
+        type: DT_INT64
+      }
+      input_arg {
+        name: "placeholder_1"
+        type: DT_INT64
+      }
+      output_arg {
+        name: "identity"
+        type: DT_BOOL
+      }
+    }
+    node_def {
+      name: "NoOp"
+      op: "NoOp"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Identity"
+      op: "Identity"
+      input: "identity_head_assert_range_assert_less_equal_all"
+      input: "^NoOp"
+      attr {
+        key: "T"
+        value {
+          type: DT_BOOL
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+    }
+    ret {
+      key: "identity"
+      value: "Identity:output:0"
+    }
+    attr {
+      key: "_input_shapes"
+      value {
+        list {
+          shape {
+          }
+          shape {
+            dim {
+              size: -1
+            }
+            dim {
+              size: 1
+            }
+          }
+          shape {
+          }
+        }
+      }
+    }
+    arg_attr {
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 1
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+                dim {
+                  size: -1
+                }
+                dim {
+                  size: 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 2
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  function {
+    signature {
+      name: "wait_until_n_batches_accumulated_false_3034808"
       input_arg {
         name: "placeholder"
         type: DT_RESOURCE
@@ -38113,7 +38243,192 @@ library {
   }
   function {
     signature {
-      name: "wait_until_n_batches_accumulated_true_1899"
+      name: "global_step_cond_true_3032922"
+      input_arg {
+        name: "read_readvariableop_global_step"
+        type: DT_RESOURCE
+        handle_data {
+          dtype: DT_INT64
+          shape {
+          }
+        }
+      }
+      input_arg {
+        name: "placeholder"
+        type: DT_INT64
+      }
+      output_arg {
+        name: "identity"
+        type: DT_INT64
+      }
+      is_stateful: true
+    }
+    node_def {
+      name: "Read/ReadVariableOp"
+      op: "ReadVariableOp"
+      input: "read_readvariableop_global_step"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_INT64
+        }
+      }
+    }
+    node_def {
+      name: "Identity"
+      op: "Identity"
+      input: "Read/ReadVariableOp:value:0"
+      attr {
+        key: "T"
+        value {
+          type: DT_INT64
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+    }
+    ret {
+      key: "identity"
+      value: "Identity:output:0"
+    }
+    attr {
+      key: "_input_shapes"
+      value {
+        list {
+          shape {
+          }
+          shape {
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 1
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  function {
+    signature {
+      name: "UpdateQuantile_wait_until_quaniles_accumulated_false_3035431"
+      input_arg {
+        name: "placeholder"
+        type: DT_RESOURCE
+      }
+      input_arg {
+        name: "placeholder_1"
+        type: DT_RESOURCE
+      }
+      input_arg {
+        name: "placeholder_2"
+        type: DT_RESOURCE
+      }
+      input_arg {
+        name: "identity_updatequantile_greaterequal"
+        type: DT_BOOL
+      }
+      output_arg {
+        name: "identity"
+        type: DT_BOOL
+      }
+    }
+    node_def {
+      name: "NoOp"
+      op: "NoOp"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Identity"
+      op: "Identity"
+      input: "identity_updatequantile_greaterequal"
+      input: "^NoOp"
+      attr {
+        key: "T"
+        value {
+          type: DT_BOOL
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+    }
+    ret {
+      key: "identity"
+      value: "Identity:output:0"
+    }
+    attr {
+      key: "_input_shapes"
+      value {
+        list {
+          shape {
+            dim {
+              size: 2
+            }
+          }
+          shape {
+          }
+          shape {
+          }
+          shape {
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 3
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  function {
+    signature {
+      name: "wait_until_n_batches_accumulated_true_3034807"
       input_arg {
         name: "resourceaccumulatortakegradient_boosted_trees_conditional_accumulator"
         type: DT_RESOURCE
@@ -40230,189 +40545,23 @@ library {
   }
   function {
     signature {
-      name: "UpdateQuantile_wait_until_quaniles_accumulated_true_2522"
+      name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_true_3033675"
       input_arg {
-        name: "resourceaccumulatortakegradient_updatequantile_conditional_accumulator"
-        type: DT_RESOURCE
-      }
-      input_arg {
-        name: "boostedtreesquantilestreamresourceflush_boosted_trees_quantileaccumulator"
-        type: DT_RESOURCE
-      }
-      input_arg {
-        name: "assignvariableop_boosted_trees_are_boundaries_ready"
-        type: DT_RESOURCE
-        handle_data {
-          dtype: DT_BOOL
-          shape {
-          }
-        }
-      }
-      input_arg {
-        name: "identity_updatequantile_greaterequal"
+        name: "identity_head_assert_range_assert_non_negative_assert_less_equal_all"
         type: DT_BOOL
+      }
+      input_arg {
+        name: "placeholder"
+        type: DT_INT64
       }
       output_arg {
         name: "identity"
         type: DT_BOOL
       }
-      is_stateful: true
     }
     node_def {
-      name: "ResourceAccumulatorTakeGradient/num_required"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_INT32
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_INT32
-            tensor_shape {
-            }
-            int_val: 1
-          }
-        }
-      }
-    }
-    node_def {
-      name: "ResourceAccumulatorTakeGradient"
-      op: "ResourceAccumulatorTakeGradient"
-      input: "resourceaccumulatortakegradient_updatequantile_conditional_accumulator"
-      input: "ResourceAccumulatorTakeGradient/num_required:output:0"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_FLOAT
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesQuantileStreamResourceFlush/num_buckets"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_INT64
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_INT64
-            tensor_shape {
-            }
-            int64_val: 100
-          }
-        }
-      }
-    }
-    node_def {
-      name: "BoostedTreesQuantileStreamResourceFlush"
-      op: "BoostedTreesQuantileStreamResourceFlush"
-      input: "boostedtreesquantilestreamresourceflush_boosted_trees_quantileaccumulator"
-      input: "BoostedTreesQuantileStreamResourceFlush/num_buckets:output:0"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-          }
-        }
-      }
-      attr {
-        key: "generate_quantiles"
-        value {
-          b: false
-        }
-      }
-    }
-    node_def {
-      name: "Const"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_BOOL
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_BOOL
-            tensor_shape {
-            }
-            bool_val: true
-          }
-        }
-      }
-    }
-    node_def {
-      name: "AssignVariableOp"
-      op: "AssignVariableOp"
-      input: "assignvariableop_boosted_trees_are_boundaries_ready"
-      input: "Const:output:0"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_BOOL
-        }
-      }
-    }
-    node_def {
-      name: "group_deps"
+      name: "NoOp"
       op: "NoOp"
-      input: "^AssignVariableOp"
-      input: "^BoostedTreesQuantileStreamResourceFlush"
-      input: "^ResourceAccumulatorTakeGradient"
       attr {
         key: "_output_shapes"
         value {
@@ -40424,8 +40573,8 @@ library {
     node_def {
       name: "Identity"
       op: "Identity"
-      input: "identity_updatequantile_greaterequal"
-      input: "^group_deps"
+      input: "identity_head_assert_range_assert_non_negative_assert_less_equal_all"
+      input: "^NoOp"
       attr {
         key: "T"
         value {
@@ -40451,21 +40600,19 @@ library {
       value {
         list {
           shape {
+          }
+          shape {
             dim {
-              size: 2
+              size: -1
             }
-          }
-          shape {
-          }
-          shape {
-          }
-          shape {
+            dim {
+              size: 1
+            }
           }
         }
       }
     }
     arg_attr {
-      key: 3
       value {
         attr {
           key: "_output_shapes"
@@ -40474,38 +40621,6 @@ library {
               shape {
               }
             }
-          }
-        }
-      }
-    }
-  }
-  function {
-    signature {
-      name: "global_step_cond_false_15"
-      input_arg {
-        name: "placeholder"
-        type: DT_RESOURCE
-      }
-      input_arg {
-        name: "global_step_initializer_zeros_0"
-        type: DT_INT64
-      }
-      output_arg {
-        name: "global_step_initializer_zeros"
-        type: DT_INT64
-      }
-    }
-    ret {
-      key: "global_step_initializer_zeros"
-      value: "global_step_initializer_zeros_0"
-    }
-    attr {
-      key: "_input_shapes"
-      value {
-        list {
-          shape {
-          }
-          shape {
           }
         }
       }
@@ -40518,6 +40633,12 @@ library {
           value {
             list {
               shape {
+                dim {
+                  size: -1
+                }
+                dim {
+                  size: 1
+                }
               }
             }
           }
@@ -40527,7 +40648,223 @@ library {
   }
   function {
     signature {
-      name: "head_cond_true_867"
+      name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_false_3033676"
+      input_arg {
+        name: "assert_head_assert_range_assert_non_negative_assert_less_equal_all"
+        type: DT_BOOL
+      }
+      input_arg {
+        name: "assert_head_labels"
+        type: DT_INT64
+      }
+      output_arg {
+        name: "identity"
+        type: DT_BOOL
+      }
+      is_stateful: true
+    }
+    node_def {
+      name: "Assert/data_0"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_STRING
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_STRING
+            tensor_shape {
+            }
+            string_val: "Labels must >= 0.  "
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Assert/data_1"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_STRING
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_STRING
+            tensor_shape {
+            }
+            string_val: "Condition x >= 0 did not hold element-wise:"
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Assert/data_2"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_STRING
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_STRING
+            tensor_shape {
+            }
+            string_val: "x (head/labels:0) = "
+          }
+        }
+      }
+    }
+    node_def {
+      name: "Assert"
+      op: "Assert"
+      input: "assert_head_assert_range_assert_non_negative_assert_less_equal_all"
+      input: "Assert/data_0:output:0"
+      input: "Assert/data_1:output:0"
+      input: "Assert/data_2:output:0"
+      input: "assert_head_labels"
+      attr {
+        key: "T"
+        value {
+          list {
+            type: DT_STRING
+            type: DT_STRING
+            type: DT_STRING
+            type: DT_INT64
+          }
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+          }
+        }
+      }
+      attr {
+        key: "summarize"
+        value {
+          i: 3
+        }
+      }
+    }
+    node_def {
+      name: "Identity"
+      op: "Identity"
+      input: "assert_head_assert_range_assert_non_negative_assert_less_equal_all"
+      input: "^Assert"
+      attr {
+        key: "T"
+        value {
+          type: DT_BOOL
+        }
+      }
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+    }
+    ret {
+      key: "identity"
+      value: "Identity:output:0"
+    }
+    attr {
+      key: "_input_shapes"
+      value {
+        list {
+          shape {
+          }
+          shape {
+            dim {
+              size: -1
+            }
+            dim {
+              size: 1
+            }
+          }
+        }
+      }
+    }
+    arg_attr {
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+              }
+            }
+          }
+        }
+      }
+    }
+    arg_attr {
+      key: 1
+      value {
+        attr {
+          key: "_output_shapes"
+          value {
+            list {
+              shape {
+                dim {
+                  size: -1
+                }
+                dim {
+                  size: 1
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  function {
+    signature {
+      name: "head_cond_true_3033775"
       input_arg {
         name: "gradients_head_weighted_loss_value_grad_div_no_nan_head_weighted_loss_num_present"
         type: DT_FLOAT
@@ -69068,7 +69405,7 @@ library {
         key: "else_branch"
         value {
           func {
-            name: "wait_until_n_batches_accumulated_false_1900"
+            name: "wait_until_n_batches_accumulated_false_3034808"
           }
         }
       }
@@ -69085,7 +69422,7 @@ library {
         key: "then_branch"
         value {
           func {
-            name: "wait_until_n_batches_accumulated_true_1899"
+            name: "wait_until_n_batches_accumulated_true_3034807"
           }
         }
       }
@@ -72488,526 +72825,88 @@ library {
   }
   function {
     signature {
-      name: "head_assert_range_assert_less_equal_Assert_AssertGuard_true_742"
+      name: "UpdateQuantile_wait_until_quaniles_accumulated_true_3035430"
       input_arg {
-        name: "identity_head_assert_range_assert_less_equal_all"
-        type: DT_BOOL
-      }
-      input_arg {
-        name: "placeholder"
-        type: DT_INT64
+        name: "resourceaccumulatortakegradient_updatequantile_conditional_accumulator"
+        type: DT_RESOURCE
       }
       input_arg {
-        name: "placeholder_1"
-        type: DT_INT64
-      }
-      output_arg {
-        name: "identity"
-        type: DT_BOOL
-      }
-    }
-    node_def {
-      name: "NoOp"
-      op: "NoOp"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Identity"
-      op: "Identity"
-      input: "identity_head_assert_range_assert_less_equal_all"
-      input: "^NoOp"
-      attr {
-        key: "T"
-        value {
-          type: DT_BOOL
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-    }
-    ret {
-      key: "identity"
-      value: "Identity:output:0"
-    }
-    attr {
-      key: "_input_shapes"
-      value {
-        list {
-          shape {
-          }
-          shape {
-            dim {
-              size: -1
-            }
-            dim {
-              size: 1
-            }
-          }
-          shape {
-          }
-        }
-      }
-    }
-    arg_attr {
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 1
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-                dim {
-                  size: -1
-                }
-                dim {
-                  size: 1
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 2
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  function {
-    signature {
-      name: "head_assert_range_assert_less_equal_Assert_AssertGuard_false_743"
-      input_arg {
-        name: "assert_head_assert_range_assert_less_equal_all"
-        type: DT_BOOL
+        name: "boostedtreesquantilestreamresourceflush_boosted_trees_quantileaccumulator"
+        type: DT_RESOURCE
       }
       input_arg {
-        name: "assert_head_labels"
-        type: DT_INT64
-      }
-      input_arg {
-        name: "assert_head_assert_range_const"
-        type: DT_INT64
-      }
-      output_arg {
-        name: "identity"
-        type: DT_BOOL
-      }
-      is_stateful: true
-    }
-    node_def {
-      name: "Assert/data_0"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_STRING
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_STRING
-            tensor_shape {
-            }
-            string_val: "Labels must <= n_classes - 1"
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Assert/data_1"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_STRING
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_STRING
-            tensor_shape {
-            }
-            string_val: "Condition x <= y did not hold element-wise:"
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Assert/data_2"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_STRING
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_STRING
-            tensor_shape {
-            }
-            string_val: "x (head/labels:0) = "
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Assert/data_4"
-      op: "Const"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-      attr {
-        key: "dtype"
-        value {
-          type: DT_STRING
-        }
-      }
-      attr {
-        key: "value"
-        value {
-          tensor {
-            dtype: DT_STRING
-            tensor_shape {
-            }
-            string_val: "y (head/assert_range/Const:0) = "
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Assert"
-      op: "Assert"
-      input: "assert_head_assert_range_assert_less_equal_all"
-      input: "Assert/data_0:output:0"
-      input: "Assert/data_1:output:0"
-      input: "Assert/data_2:output:0"
-      input: "assert_head_labels"
-      input: "Assert/data_4:output:0"
-      input: "assert_head_assert_range_const"
-      attr {
-        key: "T"
-        value {
-          list {
-            type: DT_STRING
-            type: DT_STRING
-            type: DT_STRING
-            type: DT_INT64
-            type: DT_STRING
-            type: DT_INT64
-          }
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-          }
-        }
-      }
-      attr {
-        key: "summarize"
-        value {
-          i: 3
-        }
-      }
-    }
-    node_def {
-      name: "Identity"
-      op: "Identity"
-      input: "assert_head_assert_range_assert_less_equal_all"
-      input: "^Assert"
-      attr {
-        key: "T"
-        value {
-          type: DT_BOOL
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-    }
-    ret {
-      key: "identity"
-      value: "Identity:output:0"
-    }
-    attr {
-      key: "_input_shapes"
-      value {
-        list {
-          shape {
-          }
-          shape {
-            dim {
-              size: -1
-            }
-            dim {
-              size: 1
-            }
-          }
-          shape {
-          }
-        }
-      }
-    }
-    arg_attr {
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 1
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-                dim {
-                  size: -1
-                }
-                dim {
-                  size: 1
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 2
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  function {
-    signature {
-      name: "head_assert_range_assert_non_negative_assert_less_equal_Assert_AssertGuard_true_767"
-      input_arg {
-        name: "identity_head_assert_range_assert_non_negative_assert_less_equal_all"
-        type: DT_BOOL
-      }
-      input_arg {
-        name: "placeholder"
-        type: DT_INT64
-      }
-      output_arg {
-        name: "identity"
-        type: DT_BOOL
-      }
-    }
-    node_def {
-      name: "NoOp"
-      op: "NoOp"
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-          }
-        }
-      }
-    }
-    node_def {
-      name: "Identity"
-      op: "Identity"
-      input: "identity_head_assert_range_assert_non_negative_assert_less_equal_all"
-      input: "^NoOp"
-      attr {
-        key: "T"
-        value {
-          type: DT_BOOL
-        }
-      }
-      attr {
-        key: "_output_shapes"
-        value {
-          list {
-            shape {
-            }
-          }
-        }
-      }
-    }
-    ret {
-      key: "identity"
-      value: "Identity:output:0"
-    }
-    attr {
-      key: "_input_shapes"
-      value {
-        list {
-          shape {
-          }
-          shape {
-            dim {
-              size: -1
-            }
-            dim {
-              size: 1
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-              }
-            }
-          }
-        }
-      }
-    }
-    arg_attr {
-      key: 1
-      value {
-        attr {
-          key: "_output_shapes"
-          value {
-            list {
-              shape {
-                dim {
-                  size: -1
-                }
-                dim {
-                  size: 1
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  function {
-    signature {
-      name: "global_step_cond_true_14"
-      input_arg {
-        name: "read_readvariableop_global_step"
+        name: "assignvariableop_boosted_trees_are_boundaries_ready"
         type: DT_RESOURCE
         handle_data {
-          dtype: DT_INT64
+          dtype: DT_BOOL
           shape {
           }
         }
       }
       input_arg {
-        name: "placeholder"
-        type: DT_INT64
+        name: "identity_updatequantile_greaterequal"
+        type: DT_BOOL
       }
       output_arg {
         name: "identity"
-        type: DT_INT64
+        type: DT_BOOL
       }
       is_stateful: true
     }
     node_def {
-      name: "Read/ReadVariableOp"
-      op: "ReadVariableOp"
-      input: "read_readvariableop_global_step"
+      name: "ResourceAccumulatorTakeGradient/num_required"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_INT32
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_INT32
+            tensor_shape {
+            }
+            int_val: 1
+          }
+        }
+      }
+    }
+    node_def {
+      name: "ResourceAccumulatorTakeGradient"
+      op: "ResourceAccumulatorTakeGradient"
+      input: "resourceaccumulatortakegradient_updatequantile_conditional_accumulator"
+      input: "ResourceAccumulatorTakeGradient/num_required:output:0"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_FLOAT
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesQuantileStreamResourceFlush/num_buckets"
+      op: "Const"
       attr {
         key: "_output_shapes"
         value {
@@ -73023,15 +72922,109 @@ library {
           type: DT_INT64
         }
       }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_INT64
+            tensor_shape {
+            }
+            int64_val: 100
+          }
+        }
+      }
+    }
+    node_def {
+      name: "BoostedTreesQuantileStreamResourceFlush"
+      op: "BoostedTreesQuantileStreamResourceFlush"
+      input: "boostedtreesquantilestreamresourceflush_boosted_trees_quantileaccumulator"
+      input: "BoostedTreesQuantileStreamResourceFlush/num_buckets:output:0"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+          }
+        }
+      }
+      attr {
+        key: "generate_quantiles"
+        value {
+          b: false
+        }
+      }
+    }
+    node_def {
+      name: "Const"
+      op: "Const"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+            shape {
+            }
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_BOOL
+        }
+      }
+      attr {
+        key: "value"
+        value {
+          tensor {
+            dtype: DT_BOOL
+            tensor_shape {
+            }
+            bool_val: true
+          }
+        }
+      }
+    }
+    node_def {
+      name: "AssignVariableOp"
+      op: "AssignVariableOp"
+      input: "assignvariableop_boosted_trees_are_boundaries_ready"
+      input: "Const:output:0"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+          }
+        }
+      }
+      attr {
+        key: "dtype"
+        value {
+          type: DT_BOOL
+        }
+      }
+    }
+    node_def {
+      name: "group_deps"
+      op: "NoOp"
+      input: "^AssignVariableOp"
+      input: "^BoostedTreesQuantileStreamResourceFlush"
+      input: "^ResourceAccumulatorTakeGradient"
+      attr {
+        key: "_output_shapes"
+        value {
+          list {
+          }
+        }
+      }
     }
     node_def {
       name: "Identity"
       op: "Identity"
-      input: "Read/ReadVariableOp:value:0"
+      input: "identity_updatequantile_greaterequal"
+      input: "^group_deps"
       attr {
         key: "T"
         value {
-          type: DT_INT64
+          type: DT_BOOL
         }
       }
       attr {
@@ -73053,6 +73046,13 @@ library {
       value {
         list {
           shape {
+            dim {
+              size: 2
+            }
+          }
+          shape {
+          }
+          shape {
           }
           shape {
           }
@@ -73060,7 +73060,7 @@ library {
       }
     }
     arg_attr {
-      key: 1
+      key: 3
       value {
         attr {
           key: "_output_shapes"

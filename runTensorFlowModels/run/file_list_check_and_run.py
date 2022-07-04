@@ -39,7 +39,8 @@ def startRun():
         print('-------------------- DNN Model start --------------------')
         poma_dnn_acc, poma_dnn_tflite_save_name, poma_dnn_tflite_save_path = run.run_poma_dnn()
         print('@@@@@@@@@@@@@@@ The POMA accuracy predicted by the DNN TF-Lite Model:', poma_dnn_acc)
-        print('@@@@@@@@@@@@@@@ Model Name =>', poma_dnn_tflite_save_name, 'Model Path =>', poma_dnn_tflite_save_path)
+        print('@@@@@@@@@@@@@@@ Model Name =>', poma_dnn_tflite_save_name)
+        print('@@@@@@@@@@@@@@@ Model Path =>', poma_dnn_tflite_save_path)
 
         #
 
@@ -47,14 +48,16 @@ def startRun():
 
         updrs_dnn_acc, updrs_dnn_tflite_save_name, updrs_dnn_tflite_save_path = run.run_updrs_dnn()
         print('@@@@@@@@@@@@@@@ The UPDRS accuracy predicted by the DNN TF-Lite Model:', updrs_dnn_acc)
-        print('@@@@@@@@@@@@@@@ Model Name =>', updrs_dnn_tflite_save_name, 'Model Path =>', updrs_dnn_tflite_save_path)
+        print('@@@@@@@@@@@@@@@ Model Name =>', updrs_dnn_tflite_save_name)
+        print('@@@@@@@@@@@@@@@ Model Path =>', updrs_dnn_tflite_save_path)
 
         #
 
         print('-------------------- DNN-Linear combined Model start --------------------')
         poma_dnn_linear_acc, poma_dnn_linear_tflite_save_name, poma_dnn_linear_tflite_save_path = run.run_poma_dnn_linear()
         print('@@@@@@@@@@@@@@@ The POMA accuracy predicted by the DNN-Linear combined TF-Lite Model:', poma_dnn_linear_acc)
-        print('@@@@@@@@@@@@@@@ Model Name =>', poma_dnn_linear_tflite_save_name, 'Model Path =>', poma_dnn_linear_tflite_save_path)
+        print('@@@@@@@@@@@@@@@ Model Name =>', poma_dnn_linear_tflite_save_name)
+        print('@@@@@@@@@@@@@@@ Model Path =>', poma_dnn_linear_tflite_save_path)
 
         #
 
@@ -62,20 +65,23 @@ def startRun():
 
         updrs_dnn_linear_acc, updrs_dnn_linear_tflite_save_name, updrs_dnn_linear_tflite_save_path = run.run_updrs_dnn_linear()
         print('@@@@@@@@@@@@@@@ The UPDRS accuracy predicted by the DNN-Linear combined TF-Lite Model:', updrs_dnn_linear_acc)
-        print('@@@@@@@@@@@@@@@ Model Name =>', updrs_dnn_linear_tflite_save_name, 'Model Path =>', updrs_dnn_linear_tflite_save_path)
+        print('@@@@@@@@@@@@@@@ Model Name =>', updrs_dnn_linear_tflite_save_name)
+        print('@@@@@@@@@@@@@@@ Model Path =>', updrs_dnn_linear_tflite_save_path)
 
         #
 
         print('-------------------- Gradient Boosting Trees Model start --------------------')
         poma_gradient_boosting_tflite_save_name, poma_gradient_boosting_tflite_save_path = run.run_poma_gradient_boosting()
-        print('@@@@@@@@@@@@@@@ Model Name =>', poma_gradient_boosting_tflite_save_name, 'Model Path =>', poma_gradient_boosting_tflite_save_path)
+        print('@@@@@@@@@@@@@@@ Model Name =>', poma_gradient_boosting_tflite_save_name)
+        print('@@@@@@@@@@@@@@@ Model Path =>', poma_gradient_boosting_tflite_save_path)
 
         #
 
         print('----------------------------------------------------------------------------------------------------')
 
         updrs_gradient_boosting_tflite_save_name, updrs_gradient_boosting_tflite_save_path = run.run_updrs_gradient_boosting()
-        print('@@@@@@@@@@@@@@@ Model Name =>', updrs_gradient_boosting_tflite_save_name, 'Model Path =>', updrs_gradient_boosting_tflite_save_path)
+        print('@@@@@@@@@@@@@@@ Model Name =>', updrs_gradient_boosting_tflite_save_name)
+        print('@@@@@@@@@@@@@@@ Model Path =>', updrs_gradient_boosting_tflite_save_path)
 
         running_date = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 

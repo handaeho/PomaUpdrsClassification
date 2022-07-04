@@ -57,8 +57,6 @@ class Run:
     def __init__(self):
         pass
 
-    # load data from Elastic-Search.
-
     def run_poma_dnn(self):
         """
         [Run Sequence]
@@ -71,7 +69,22 @@ class Run:
 
         dataset_from_es = load_dataset_from_elastic_search()
 
-        x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, y_test_encoding = \
+        dataset_from_es = dataset_from_es[['poma_danger_3class', 'updrs_danger_3class', 'Velocity(m/s)', 'Cycle_time(s)', 'L_Cycle_time(s)',
+                                           'R_Cycle_time(s)', 'L_Stride_length(m)', 'R_Stride_length(m)', 'L_Stride_per_min(Stride/m)',
+                                           'R_Stride_per_min(stride/m)', 'L_Foot_vel.(m/s)', 'R_Foot_vel.(m/s)', 'L_step_time(s)', 'R_step_time(s)',
+                                           'L_Step_per_min(step/m)', 'R_step_per_min(step/m)', 'L_Stance_time(s)' , 'R_Stance_time(s)',
+                                           'L_swing_time(s)', 'R_Swing_time(s)', 'DLST_time(s)', 'DLST_Initial_time(s)', 'DLST_Terminal_time(s)',
+                                           'L_Total(%)', 'L_In(%)', 'L_out(%)', 'L_front(%)', 'L_back(%)', 'L1(%)', 'L2(%)', 'L3(%)', 'L4(%)',
+                                           'L5(%)', 'L6(%)', 'L7(%)', 'L8(%)', 'R_Total(%)', 'R_In(%)', 'R_out(%)', 'R_front(%)', 'R_back(%)',
+                                           'R1(%)', 'R2(%)', 'R3(%)', 'R4(%)', 'R5(%)', 'R6(%)', 'R7(%)', 'R8(%)', 'L1 Balance_Time', 'L2', 'L3',
+                                           'L4', 'L5', 'L6', 'L7', 'L8', 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'L1-1 Sequence',
+                                           'L1-2 Sequence', 'L2-1', 'L2-2', 'L3-1', 'L3-2', 'L4-1', 'L4-2', 'L5-1', 'L5-2', 'L6-1', 'L6-2', 'L7-1',
+                                           'L7-2', 'L8-1', 'L8-2', 'R1-1', 'R1-2', 'R2-1', 'R2-2', 'R3-1', 'R3-2', 'R4-1', 'R4-2', 'R5-1', 'R5-2',
+                                           'R6-1', 'R6-2', 'R7-1', 'R7-2', 'R8-1', 'R8-2']]
+
+        print(dataset_from_es)
+
+        x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, y_test_encoding, labels_test = \
             poma_dnn.load_dataset(dataset_from_es=dataset_from_es)
 
         # save dnn models to H5 file
@@ -80,7 +93,8 @@ class Run:
                                                                         x_test_scaled=x_test_scaled,
                                                                         y_train_encoding=y_train_encoding,
                                                                         y_eval_encoding=y_eval_encoding,
-                                                                        y_test_encoding=y_test_encoding)
+                                                                        y_test_encoding=y_test_encoding,
+                                                                        labels_test=labels_test)
 
         poma_dnn_convert_tflite = PomaDNNConvertH5toTflite(h5_model_name=h5_models_name, h5_model_path=h5_models_path)
 
@@ -92,8 +106,7 @@ class Run:
 
         poma_x, poma_y = poma_dnn_inference_test.poma_load_dataset(test_dataset=dataset_from_es)
 
-        accuracy = poma_dnn_inference_test.tf_lite_inference(model_path=poma_dnn_tflite_save_path,
-                                                             inputs=poma_x, labels=poma_y)
+        accuracy = poma_dnn_inference_test.tf_lite_inference(model_path=poma_dnn_tflite_save_path, inputs=poma_x, labels=poma_y)
 
         return accuracy, poma_dnn_tflite_save_name, poma_dnn_tflite_save_path
 
@@ -109,7 +122,20 @@ class Run:
 
         dataset_from_es = load_dataset_from_elastic_search()
 
-        x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, y_test_encoding = \
+        dataset_from_es = dataset_from_es[['poma_danger_3class', 'updrs_danger_3class', 'Velocity(m/s)', 'Cycle_time(s)', 'L_Cycle_time(s)',
+                                           'R_Cycle_time(s)', 'L_Stride_length(m)', 'R_Stride_length(m)', 'L_Stride_per_min(Stride/m)',
+                                           'R_Stride_per_min(stride/m)', 'L_Foot_vel.(m/s)', 'R_Foot_vel.(m/s)', 'L_step_time(s)', 'R_step_time(s)',
+                                           'L_Step_per_min(step/m)', 'R_step_per_min(step/m)', 'L_Stance_time(s)', 'R_Stance_time(s)',
+                                           'L_swing_time(s)', 'R_Swing_time(s)', 'DLST_time(s)', 'DLST_Initial_time(s)', 'DLST_Terminal_time(s)',
+                                           'L_Total(%)', 'L_In(%)', 'L_out(%)', 'L_front(%)', 'L_back(%)', 'L1(%)', 'L2(%)', 'L3(%)', 'L4(%)',
+                                           'L5(%)', 'L6(%)', 'L7(%)', 'L8(%)', 'R_Total(%)', 'R_In(%)', 'R_out(%)', 'R_front(%)', 'R_back(%)',
+                                           'R1(%)', 'R2(%)', 'R3(%)', 'R4(%)', 'R5(%)', 'R6(%)', 'R7(%)', 'R8(%)', 'L1 Balance_Time', 'L2', 'L3',
+                                           'L4', 'L5', 'L6', 'L7', 'L8', 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'L1-1 Sequence',
+                                           'L1-2 Sequence', 'L2-1', 'L2-2', 'L3-1', 'L3-2', 'L4-1', 'L4-2', 'L5-1', 'L5-2', 'L6-1', 'L6-2', 'L7-1',
+                                           'L7-2', 'L8-1', 'L8-2', 'R1-1', 'R1-2', 'R2-1', 'R2-2', 'R3-1', 'R3-2', 'R4-1', 'R4-2', 'R5-1', 'R5-2',
+                                           'R6-1', 'R6-2', 'R7-1', 'R7-2', 'R8-1', 'R8-2']]
+
+        x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, y_test_encoding, labels_test = \
             updrs_dnn.load_dataset(dataset_from_es=dataset_from_es)
 
         # save dnn models to H5 file
@@ -118,7 +144,8 @@ class Run:
                                                                          x_test_scaled=x_test_scaled,
                                                                          y_train_encoding=y_train_encoding,
                                                                          y_eval_encoding=y_eval_encoding,
-                                                                         y_test_encoding=y_test_encoding)
+                                                                         y_test_encoding=y_test_encoding,
+                                                                         labels_test=labels_test)
 
         updrs_dnn_convert_tflite = UpdrsDNNConvertH5toTflite(h5_model_name=h5_models_name, h5_model_path=h5_models_path)
 
@@ -146,6 +173,19 @@ class Run:
         poma_dnn_linear = MakePomaDnnLinearModel()
 
         dataset_from_es = load_dataset_from_elastic_search()
+
+        dataset_from_es = dataset_from_es[['poma_danger_3class', 'updrs_danger_3class', 'Velocity(m/s)', 'Cycle_time(s)', 'L_Cycle_time(s)',
+                                           'R_Cycle_time(s)', 'L_Stride_length(m)', 'R_Stride_length(m)', 'L_Stride_per_min(Stride/m)',
+                                           'R_Stride_per_min(stride/m)', 'L_Foot_vel.(m/s)', 'R_Foot_vel.(m/s)', 'L_step_time(s)', 'R_step_time(s)',
+                                           'L_Step_per_min(step/m)', 'R_step_per_min(step/m)', 'L_Stance_time(s)', 'R_Stance_time(s)',
+                                           'L_swing_time(s)', 'R_Swing_time(s)', 'DLST_time(s)', 'DLST_Initial_time(s)', 'DLST_Terminal_time(s)',
+                                           'L_Total(%)', 'L_In(%)', 'L_out(%)', 'L_front(%)', 'L_back(%)', 'L1(%)', 'L2(%)', 'L3(%)', 'L4(%)',
+                                           'L5(%)', 'L6(%)', 'L7(%)', 'L8(%)', 'R_Total(%)', 'R_In(%)', 'R_out(%)', 'R_front(%)', 'R_back(%)',
+                                           'R1(%)', 'R2(%)', 'R3(%)', 'R4(%)', 'R5(%)', 'R6(%)', 'R7(%)', 'R8(%)', 'L1 Balance_Time', 'L2', 'L3',
+                                           'L4', 'L5', 'L6', 'L7', 'L8', 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'L1-1 Sequence',
+                                           'L1-2 Sequence', 'L2-1', 'L2-2', 'L3-1', 'L3-2', 'L4-1', 'L4-2', 'L5-1', 'L5-2', 'L6-1', 'L6-2', 'L7-1',
+                                           'L7-2', 'L8-1', 'L8-2', 'R1-1', 'R1-2', 'R2-1', 'R2-2', 'R3-1', 'R3-2', 'R4-1', 'R4-2', 'R5-1', 'R5-2',
+                                           'R6-1', 'R6-2', 'R7-1', 'R7-2', 'R8-1', 'R8-2']]
 
         x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, y_test_encoding = \
             poma_dnn_linear.load_dataset(dataset_from_es=dataset_from_es)
@@ -187,6 +227,19 @@ class Run:
 
         dataset_from_es = load_dataset_from_elastic_search()
 
+        dataset_from_es = dataset_from_es[['poma_danger_3class', 'updrs_danger_3class', 'Velocity(m/s)', 'Cycle_time(s)', 'L_Cycle_time(s)',
+                                           'R_Cycle_time(s)', 'L_Stride_length(m)', 'R_Stride_length(m)', 'L_Stride_per_min(Stride/m)',
+                                           'R_Stride_per_min(stride/m)', 'L_Foot_vel.(m/s)', 'R_Foot_vel.(m/s)', 'L_step_time(s)', 'R_step_time(s)',
+                                           'L_Step_per_min(step/m)', 'R_step_per_min(step/m)', 'L_Stance_time(s)', 'R_Stance_time(s)',
+                                           'L_swing_time(s)', 'R_Swing_time(s)', 'DLST_time(s)', 'DLST_Initial_time(s)', 'DLST_Terminal_time(s)',
+                                           'L_Total(%)', 'L_In(%)', 'L_out(%)', 'L_front(%)', 'L_back(%)', 'L1(%)', 'L2(%)', 'L3(%)', 'L4(%)',
+                                           'L5(%)', 'L6(%)', 'L7(%)', 'L8(%)', 'R_Total(%)', 'R_In(%)', 'R_out(%)', 'R_front(%)', 'R_back(%)',
+                                           'R1(%)', 'R2(%)', 'R3(%)', 'R4(%)', 'R5(%)', 'R6(%)', 'R7(%)', 'R8(%)', 'L1 Balance_Time', 'L2', 'L3',
+                                           'L4', 'L5', 'L6', 'L7', 'L8', 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'L1-1 Sequence',
+                                           'L1-2 Sequence', 'L2-1', 'L2-2', 'L3-1', 'L3-2', 'L4-1', 'L4-2', 'L5-1', 'L5-2', 'L6-1', 'L6-2', 'L7-1',
+                                           'L7-2', 'L8-1', 'L8-2', 'R1-1', 'R1-2', 'R2-1', 'R2-2', 'R3-1', 'R3-2', 'R4-1', 'R4-2', 'R5-1', 'R5-2',
+                                           'R6-1', 'R6-2', 'R7-1', 'R7-2', 'R8-1', 'R8-2']]
+
         x_train_scaled, x_eval_scaled, x_test_scaled, y_train_encoding, y_eval_encoding, y_test_encoding = \
             updrs_dnn_linear.load_dataset(dataset_from_es=dataset_from_es)
 
@@ -220,6 +273,19 @@ class Run:
 
         dataset_from_es = load_dataset_from_elastic_search()
 
+        dataset_from_es = dataset_from_es[['poma_danger_3class', 'updrs_danger_3class', 'Velocity(m/s)', 'Cycle_time(s)', 'L_Cycle_time(s)',
+                                           'R_Cycle_time(s)', 'L_Stride_length(m)', 'R_Stride_length(m)', 'L_Stride_per_min(Stride/m)',
+                                           'R_Stride_per_min(stride/m)', 'L_Foot_vel.(m/s)', 'R_Foot_vel.(m/s)', 'L_step_time(s)', 'R_step_time(s)',
+                                           'L_Step_per_min(step/m)', 'R_step_per_min(step/m)', 'L_Stance_time(s)', 'R_Stance_time(s)',
+                                           'L_swing_time(s)', 'R_Swing_time(s)', 'DLST_time(s)', 'DLST_Initial_time(s)', 'DLST_Terminal_time(s)',
+                                           'L_Total(%)', 'L_In(%)', 'L_out(%)', 'L_front(%)', 'L_back(%)', 'L1(%)', 'L2(%)', 'L3(%)', 'L4(%)',
+                                           'L5(%)', 'L6(%)', 'L7(%)', 'L8(%)', 'R_Total(%)', 'R_In(%)', 'R_out(%)', 'R_front(%)', 'R_back(%)',
+                                           'R1(%)', 'R2(%)', 'R3(%)', 'R4(%)', 'R5(%)', 'R6(%)', 'R7(%)', 'R8(%)', 'L1 Balance_Time', 'L2', 'L3',
+                                           'L4', 'L5', 'L6', 'L7', 'L8', 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'L1-1 Sequence',
+                                           'L1-2 Sequence', 'L2-1', 'L2-2', 'L3-1', 'L3-2', 'L4-1', 'L4-2', 'L5-1', 'L5-2', 'L6-1', 'L6-2', 'L7-1',
+                                           'L7-2', 'L8-1', 'L8-2', 'R1-1', 'R1-2', 'R2-1', 'R2-2', 'R3-1', 'R3-2', 'R4-1', 'R4-2', 'R5-1', 'R5-2',
+                                           'R6-1', 'R6-2', 'R7-1', 'R7-2', 'R8-1', 'R8-2']]
+
         x_train_scaled, x_test_scaled, labels_train, labels_test = poma_gbt.load_dataset(
             dataset_from_es=dataset_from_es)
 
@@ -240,6 +306,19 @@ class Run:
         updrs_gbt = MakeUpdrsGBTModel()
 
         dataset_from_es = load_dataset_from_elastic_search()
+
+        dataset_from_es = dataset_from_es[['poma_danger_3class', 'updrs_danger_3class', 'Velocity(m/s)', 'Cycle_time(s)', 'L_Cycle_time(s)',
+                                           'R_Cycle_time(s)', 'L_Stride_length(m)', 'R_Stride_length(m)', 'L_Stride_per_min(Stride/m)',
+                                           'R_Stride_per_min(stride/m)', 'L_Foot_vel.(m/s)', 'R_Foot_vel.(m/s)', 'L_step_time(s)', 'R_step_time(s)',
+                                           'L_Step_per_min(step/m)', 'R_step_per_min(step/m)', 'L_Stance_time(s)', 'R_Stance_time(s)',
+                                           'L_swing_time(s)', 'R_Swing_time(s)', 'DLST_time(s)', 'DLST_Initial_time(s)', 'DLST_Terminal_time(s)',
+                                           'L_Total(%)', 'L_In(%)', 'L_out(%)', 'L_front(%)', 'L_back(%)', 'L1(%)', 'L2(%)', 'L3(%)', 'L4(%)',
+                                           'L5(%)', 'L6(%)', 'L7(%)', 'L8(%)', 'R_Total(%)', 'R_In(%)', 'R_out(%)', 'R_front(%)', 'R_back(%)',
+                                           'R1(%)', 'R2(%)', 'R3(%)', 'R4(%)', 'R5(%)', 'R6(%)', 'R7(%)', 'R8(%)', 'L1 Balance_Time', 'L2', 'L3',
+                                           'L4', 'L5', 'L6', 'L7', 'L8', 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'L1-1 Sequence',
+                                           'L1-2 Sequence', 'L2-1', 'L2-2', 'L3-1', 'L3-2', 'L4-1', 'L4-2', 'L5-1', 'L5-2', 'L6-1', 'L6-2', 'L7-1',
+                                           'L7-2', 'L8-1', 'L8-2', 'R1-1', 'R1-2', 'R2-1', 'R2-2', 'R3-1', 'R3-2', 'R4-1', 'R4-2', 'R5-1', 'R5-2',
+                                           'R6-1', 'R6-2', 'R7-1', 'R7-2', 'R8-1', 'R8-2']]
 
         x_train_scaled, x_test_scaled, labels_train, labels_test = updrs_gbt.load_dataset(
             dataset_from_es=dataset_from_es)

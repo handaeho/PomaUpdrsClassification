@@ -1,0 +1,5 @@
+2022-06-06 09:00:06.328032: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2022-06-06 09:00:06.328075: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+tensorflow version: 2.8.0-dev20211004
+Now file list:  ['.ipynb_checkpoints', 'nohup.out', 'data_file_list.txt', '211118_real_poma_updrs_3class_dataset_test_10rows.csv', '210914_real_poma_updrs_3class_dataset_001.csv', '211112_real_poma_updrs_3class_dataset_test_10rows.csv']
+---------------------------------------- Nothing Happened... ----------------------------------------
